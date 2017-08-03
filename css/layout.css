@@ -236,6 +236,7 @@ input:-moz-placeholder {
 				color: #ffffff;
 			}
 			.b-left-block .b-contacts p a {
+				font-size: 14px;
 				color: #F2EBDA;
 			}	
 			.b-contacts-market {height: 50px;margin-bottom: 2px;}
@@ -556,6 +557,7 @@ input:-moz-placeholder {
 						}
 						.b-contacts p a {
 							font-family: "RobotoSlab-Regular";
+							font-size: 14px;
 							color: #A0762C;
 							line-height: 22px;
 						}						
