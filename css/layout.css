@@ -665,7 +665,6 @@ input:-moz-placeholder {
 		font-family: "RobotoSlab-Regular";
 		line-height: 26px;
 		color: #4A4A4A;
-		/* margin-top: 16px; */
 	}
 	.b-text a {
 
@@ -684,7 +683,7 @@ input:-moz-placeholder {
 		list-style: decimal;
 		}	
 	.b-text ul {
-		/* margin-bottom: 34px; */
+	margin-bottom: 24px;
 	}
 	.b-text ul li {
 		margin: 0;
