@@ -155,7 +155,7 @@ input:-moz-placeholder {
 	display: inline-block;
 	background-color: #687734;
 	border-radius: 100px;
-	padding: 11px 20px 8px 20px;
+	padding: 10px 20px 8px 20px;
 	border: none;
 	cursor: pointer;
 }
@@ -330,8 +330,8 @@ input:-moz-placeholder {
 					height: 40px;
 					background-color: #ffffff;
 					border-radius: 100px;
-					border: 1px solid #C6C6C6;
-					padding: 0 0 3px 26px;
+					border: 1px solid #E9E9E9;
+					padding: 0 0 2px 26px;
 					box-sizing: border-box;
 					font-family: "RobotoSlab-Regular";
 					font-size: 14px;
@@ -369,8 +369,8 @@ input:-moz-placeholder {
 				display: inline-block;
 				vertical-align: middle;
 				font-size: 18px;
-				line-height: 20px;
-				padding: 15px 26px 13px 60px;
+				line-height: 26px;
+				padding: 13px 26px 13px 60px;
 				position: relative;
 			}
 			.b-product-slider {
@@ -404,7 +404,7 @@ input:-moz-placeholder {
 					}											
 					.b-slider-item .b-block {
 						width: calc(100% - 120px);
-						padding: 38px 0;
+						padding: 35px 0;
 						height: 359px;
 					}
 						.b-slider-text {
@@ -456,6 +456,9 @@ input:-moz-placeholder {
 				.b-product-card:nth-child(4n+1) {
 					margin-right: 0px;
 				}
+				.b-product-url {
+					cursor: pointer;
+				}
 					.b-product-card .b-img {
 						background-repeat: no-repeat;
 						background-size: contain;
@@ -464,7 +467,7 @@ input:-moz-placeholder {
 						height: 178px;
 						margin-bottom: 14px;
 					}
-					.b-product-card p {
+					.b-product-card h3 {
 						font-family: "RobotoSlab-Bold";
 						font-size: 16px;
 						line-height: 20px;
@@ -473,15 +476,26 @@ input:-moz-placeholder {
 						overflow: hidden;
 						margin-bottom: 7px;
 					}
+					.b-product-card h3 {
+						font-family: "RobotoSlab-Bold";
+						font-size: 16px;
+						line-height: 20px;
+						color: #4A4A4A;
+						height: 60px;
+						overflow: hidden;
+						margin-bottom: 7px;
+					}
+						.b-product-card a:hover h3 {
+							text-decoration: underline;
+						}										
 					.b-product-card span {
 						font-family: "Intro";
 						font-size: 20px;
-						/* line-height: 0; */
+						line-height: 24px;
 						color: #687734;
 						display: inline-block;
 						width: calc(100% - 98px);
 						vertical-align: middle;
-						padding-top: 6px;
 					}
 					.b-product-card .icon-rub {
 					width: 12px;
@@ -497,7 +511,7 @@ input:-moz-placeholder {
 					.b-product-card .b-btn-green {
 						display: inline-block;
 						vertical-align: middle;
-						padding: 5px 11px 2px 11px;
+						padding: 4px 11px 2px 11px;
 					}
 	.b-footer {
 		background-image: url('../i/footer.jpg');
@@ -517,6 +531,7 @@ input:-moz-placeholder {
 					box-sizing: border-box;
 					padding: 30px 40px;
 					margin-bottom: 37px;
+					border-radius: 10px;
 					box-sizing: border-box;
 					text-align: left;
 					-webkit-box-shadow: 0px 7px 50px rgba(0,0,0,0.2);
@@ -595,6 +610,9 @@ input:-moz-placeholder {
 						.b-copiright a {
 							color: #687734;
 						}
+							.b-copiright a:hover {
+								text-decoration: underline;
+							}						
 .b-text{
 	font-family: "RobotoSlab-Regular";
 }
@@ -728,7 +746,7 @@ input:-moz-placeholder {
 		background-color: #fdfaf2;
 	}
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -778,6 +796,12 @@ input:-moz-placeholder {
 	.b-icon:before{
 		background-image: url('../i/sprite@2x.png');
 	}
+	.b-logo {
+		background-image: url('../i/logo-sand@2x.png');	
+	}
+	.b-footer .b-logo {
+		background-image: url('../i/logo-green@2x.png');	
+	}	
 }	
 @media screen and (max-width: 1250px){
 	
