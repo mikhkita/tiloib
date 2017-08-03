@@ -160,7 +160,7 @@ input:-moz-placeholder {
 	cursor: pointer;
 }
 	.b-btn-green:hover {
-		background-color: #70832e;
+		background-color: #a0762c;
 	}
 .slick-dots {
 	position: absolute;
@@ -278,7 +278,10 @@ input:-moz-placeholder {
 				line-height: 22px;
 				display: inline-block;
 				letter-spacing: 0.8px;
-			}		
+			}	
+			.b-header .b-menu a:hover {
+				color: #a0762c;
+			}	
 			.b-search-block {
 				text-align: right;
 				/* margin-bottom: 51px; */
@@ -425,9 +428,10 @@ input:-moz-placeholder {
 					background-repeat: no-repeat;
 					background-size: contain;
 					background-position: 50% 50%;
-					width: 250px;
+					width: 45%;
 					height: 282px;
 					margin: 0 auto;
+					vertical-align: middle;
 				}
 	.b-content {
 
@@ -558,6 +562,9 @@ input:-moz-placeholder {
 								color: #A0762C;
 								text-transform: none;
 							}
+							.b-footer-col li a:hover {
+								border-bottom: 1px solid #A0762C; 
+							}							
 							.b-footer-col input {
 								font-family: "RobotoSlab-Regular";
 								font-size: 14px;
