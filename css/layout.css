@@ -57,10 +57,12 @@ a{
 	text-decoration: none;
 	color: #687734;
 }
-li,ol{
+ul li{
 	list-style: none;
 }
-
+ol {
+	list-style:none;
+}
 h1,h2,h3,h4,h5,h6{
 	font-family: "Intro";
 	font-weight: 100;
@@ -620,7 +622,7 @@ input:-moz-placeholder {
 	font-family: "RobotoSlab-Regular";
 }
 	.b-text h1,.b-text h2,.b-text h3,.b-text h4,.b-text h5,.b-text h6,.b-text a,.b-text p,.b-text ul {
-		max-width: 100%;
+		width: 100%;
 	}
 	.b-text h1 {
 		font-family: "Intro";
@@ -672,34 +674,31 @@ input:-moz-placeholder {
 
 		}
 	.b-text ol {
-
-	}
-	.b-text ol li{
-
-	}
-	.b-text ol li:before{
-
-	}	
+	    list-style:none;
+	  }
+    .b-text ol li {
+		margin: 0;
+		padding: 0;
+		margin-left: 21px;
+		padding-left: 16px;
+		list-style: decimal;
+		}	
 	.b-text ul {
 		/* margin-bottom: 34px; */
 	}
+	.b-text ul li {
+		margin: 0;
+		padding: 0;
+		margin-left: 21px;
+		padding-left: 16px;
+		list-style: disc;
+	}
 	.b-text li {
 		font-family: "RobotoSlab-Regular";
-		position: relative;
-		padding-left: 30px;
 		font-size: 16px;
 		line-height: 26px;
 		color: #4A4A4A;
 	}		
-	.b-text ul li:before {
-		content: "\25CF";
-		display: inline-block;
-		width: 14px;
-		margin-right: 15px;
-		position: absolute;
-		left: 0px;
-		top: 0px;
-	}
 	.b-text img {
 		margin-top: 24px;
 		width: 100%;
