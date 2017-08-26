@@ -124,6 +124,15 @@ input.error,textarea.error{
 	left: 50%;
 	margin-left: -500px;
 }
+.table {
+	display: table;
+}
+.row {
+	display: table-row;
+}
+.cell {
+	display: table-cell;
+}
 input::-webkit-input-placeholder {
 	color: #434343;
 }
@@ -762,7 +771,168 @@ input:-moz-placeholder {
 	.b-text tr:nth-child(2n){
 		background-color: #fdfaf2;
 	}
+.b-cart {
 
+}
+	.b-ordering {
+		width: calc(100% - 278px);
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 40px;
+	}
+		.b-ordering-process {
+    		background-color: #FAF7EF;
+    		border-radius: 10px;
+    		height: 71px;
+    		box-sizing: border-box;
+    		padding: 0 0 0 28px;
+    		margin-bottom: 32px;
+  }
+			.b-ordering-process ul {
+				counter-reset: cnt 0;
+				display: table;
+				height: 100%;
+			}
+			.b-ordering-process li {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.b-ordering-process>ul>li:before {
+				counter-increment: cnt;
+				content: counter(cnt);
+				display: inline-block;
+				width: 31px;
+				height: 31px;
+				border-radius: 50%;
+				line-height: 31px;
+				background-color: #a0762c;
+				color: #faf7ef;
+				text-align: center;
+				margin-right: 9px;
+			}
+			.b-ordering-process .b-dots {
+				display: inline-block;
+				height: initial;
+				margin: 0 20px;
+			}
+				.b-ordering-process .b-dots li {
+					display: inline-block;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: #a0762c;
+					margin: 0 9px;
+				}
+		.b-ordering-items-table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-bottom: 32px;
+		}
+			.b-ordering-items-table-title {
+				height: 30px;
+				border-bottom: 1px solid #faf7ef;
+			}
+				.b-ordering-items-table-title h4 {
+					display: table-cell;
+					font-size: 12px;
+					color: #4A4A4A;
+				}
+			.b-ordering-items-table-row {
+				width: 100%;
+				border-collapse: collapse;
+				border-bottom: 1px solid #faf7ef;
+			}
+				.b-ordering-items-table p {
+					font-family: "RobotoSlab-Bold";
+					font-size: 14px;
+					color: #4a4a4a;
+					box-sizing: border-box;
+					vertical-align: middle;
+				}
+				.b-cart-item-img-name {
+					width: 52%;
+					vertical-align: middle;
+					padding: 17px 0;
+				}
+				.b-cart-item-name {
+					display: inline-block;
+					padding: 0 !important;
+					width: calc(100% - 91px);
+					height: initial !important;
+				}
+				.b-cart-item-img-name .b-img {
+					height: 70px;
+					width: 70px;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 17px;
+				}
+				.b-cart-item-price {
+
+				}
+				.b-cart-item-discount {
+
+				}
+				.b-cart-item-quantity {vertical-align: middle;}
+				.b-cart-item-cost {
+
+				}
+		.b-cart-info {
+			width: 234px;
+			display: inline-block;
+			vertical-align: top;
+			box-sizing: border-box;
+			border: 2px solid #F2EBDA;
+			border-radius: 15px;
+			padding: 12px 24px;
+		}
+			.b-cart-info-table {
+				border-collapse: collapse;
+				display: table;
+				width: 100%;
+			}
+			.b-cart-info-table-row {
+				width: 100%;
+				height: 44px;
+				border-bottom: 1px solid #F2EBDA;
+				display: table;
+			}
+			.b-cart-info-table-row:last-child {
+				border:none;
+				height: 56px;
+			}
+				.b-cart-info-table-row p{
+					font-family: "RobotoSlab-Bold";
+					font-size: 16px;
+					display: table-cell;
+					vertical-align: middle;
+				}				
+					p.b-cart-info-summ-title {
+
+					}
+					p.b-cart-item-summ {
+						font-family: "RobotoSlab-Regular";
+						color: #4a4a4a;
+						text-align: right;
+					}
+					p.b-cart-delivery-title {
+
+					}
+					p.b-cart-delivery {
+						font-family: "RobotoSlab-Regular";
+						color: #4a4a4a;
+						text-align: right;
+					}
+					p.b-cart-summ-title {
+
+					}
+					p.b-cart-summ {
+						font-family: "Intro";
+						font-size: 24px;
+						color: #687734;
+						text-align: right;
+						padding-top: 6px;
+					}
 [class^="icon-"]:before, [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
