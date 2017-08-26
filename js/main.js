@@ -79,7 +79,7 @@ $(document).ready(function(){
         dots: true,
         slidesToShow: 1,
         prevArrow: false,
-        nextArrow: false,         
+        nextArrow: false,        
         infinite: true   
     });
     
