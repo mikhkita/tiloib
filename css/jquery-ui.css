@@ -524,10 +524,12 @@ a.ui-button:active,
 .ui-icon-caret-2-n-s { background-position: -128px 0; }
 .ui-icon-caret-2-e-w { background-position: -144px 0; }
 .ui-icon-triangle-1-n {background-position: 0 -16px;content: "weqw";color: #ffffff;font-size: 16px;text-align: center;line-height: 16px;font-family: "RobotoSlab-Regular";}
+.ui-icon-triangle-1-n:before{content:"+";display: inline-block;color: #ffffff !important;font-family: "RobotoSlab-Bold";font-size: 16px;line-height: 16px;position: absolute;left: 0;top: 0;width: 16px;height: 16px;text-align: center;text-indent: initial;}
 .ui-icon-triangle-1-ne { background-position: -16px -16px; }
 .ui-icon-triangle-1-e { background-position: -32px -16px; }
 .ui-icon-triangle-1-se { background-position: -48px -16px; }
-.ui-icon-triangle-1-s { background-position: -65px -16px; }
+.ui-icon-triangle-1-s {background-position: -65px -16px;}
+.ui-icon-triangle-1-s:before{content: '-';display: inline-block;color: #ffffff !important;font-family: "RobotoSlab-Bold";font-size: 16px;line-height: 16px;position: absolute;left: 0;top: 0;width: 16px;height: 16px;text-align: center;text-indent: initial;}
 .ui-icon-triangle-1-sw { background-position: -80px -16px; }
 .ui-icon-triangle-1-w { background-position: -96px -16px; }
 .ui-icon-triangle-1-nw { background-position: -112px -16px; }

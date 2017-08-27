@@ -82,6 +82,11 @@ $(document).ready(function(){
         nextArrow: false,        
         infinite: true   
     });
-    $( "#spinner" ).spinner();
-    
+
+    $( "#spinner" ).spinner({
+        min: 0
+    });
+    //Set the start value
+   $( "#spinner" ).spinner( "value", 1 );
+   
 });

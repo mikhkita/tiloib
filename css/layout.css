@@ -1,15 +1,17 @@
 @charset "utf-8";
 
-
 @font-face {
-  font-family: 'Intro';
-  src: url('../fonts/Intro.eot?#iefix') format('embedded-opentype'),  
-  		url('../fonts/Intro.otf')  format('opentype'),
-	     url('../fonts/Intro.woff') format('woff'), 
-	     url('../fonts/Intro.ttf')  format('truetype'), 
-	     url('../fonts/Intro.svg#Intro') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family:'Introo';
+    src: url('../fonts/Introo.eot');
+	src: url('../fonts/Introo.eot#iefix') format('embedded-opentype'),
+		url('../fonts/Introo.woff2') format('woff2'),
+		url('../fonts/Introo.woff') format('woff'),
+		url('../fonts/Introo.ttf') format('truetype'),
+		url('../fonts/Introo.svg#Introo') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    unicode-range: U+0020-0491;
 }
 @font-face {
   font-family: 'RobotoSlab-Regular';
@@ -64,7 +66,7 @@ ol {
 	list-style:none;
 }
 h1,h2,h3,h4,h5,h6{
-	font-family: "Intro";
+	font-family: "Introo";
 	font-weight: 100;
 	color: #A0762C;
 }
@@ -157,7 +159,7 @@ input:-moz-placeholder {
 		
 	}
 .b-btn-green {
-	font-family: "Intro";
+	font-family: "Introo";
 	color: #ffffff;
 	font-size: 12px;
 	line-height: 22px;
@@ -215,7 +217,7 @@ input:-moz-placeholder {
 				padding-left: 14px;
 			}
 			.b-left-block .b-menu a {
-				font-family: "Intro";
+				font-family: "Introo";
 				font-size: 12px;
 				line-height: 12px;
 				color: #ffffff;
@@ -235,7 +237,7 @@ input:-moz-placeholder {
 
 		}
 			.b-contacts h3,.b-contacts a {
-				font-family: "Intro";
+				font-family: "Introo";
 				font-size: 12px;
 				line-height: 22px;
 				text-transform: uppercase;
@@ -283,7 +285,7 @@ input:-moz-placeholder {
 				margin-right: 0px;
 			}
 			.b-header .b-menu a {
-				font-family: "Intro";
+				font-family: "Introo";
 				color: #687734;
 				font-size: 12px;
 				line-height: 22px;
@@ -401,7 +403,7 @@ input:-moz-placeholder {
 					height: 359px;
 				}
 					.b-slider-item h2 {
-						font-family: "Intro";
+						font-family: "Introo";
 						font-size: 30px;
 						line-height: 40px;
 						color: #A0762C;
@@ -504,7 +506,7 @@ input:-moz-placeholder {
 								text-decoration: underline;
 							}										
 						.b-product-card span {
-							font-family: "Intro";
+							font-family: "Introo";
 							font-size: 20px;
 							line-height: 24px;
 							color: #687734;
@@ -580,7 +582,7 @@ input:-moz-placeholder {
 							width: calc(100%/3);
 						}
 							.b-footer-col h3 {
-								font-family: "Intro";
+								font-family: "Introo";
 								font-size: 16px;
 								line-height: 22px;
 								color: #687734;
@@ -636,7 +638,7 @@ input:-moz-placeholder {
 		width: 100%;
 	}
 	.b-text h1 {
-		font-family: "Intro";
+		font-family: "Introo";
 		font-size: 30px;
 		line-height: 34px;
 		text-transform: uppercase;
@@ -836,8 +838,8 @@ input:-moz-placeholder {
 			margin-bottom: 32px;
 		}
 			.b-ordering-items-table-title {
-				height: 30px;
-				border-bottom: 1px solid #faf7ef;
+				height: 26px;
+				border-bottom: 1px solid #f2ebda;
 			}
 				.b-ordering-items-table-title h4 {
 					display: table-cell;
@@ -846,10 +848,13 @@ input:-moz-placeholder {
 					padding-right: 0;
 					vertical-align: initial;
 				}
+				.b-ordering-items-table-title .b-cart-item-price {
+					padding-right: 9px !important;
+				}
 			.b-ordering-items-table-row {
 				width: 100%;
 				border-collapse: collapse;
-				border-bottom: 1px solid #faf7ef;
+				border-bottom: 1px solid #f2ebda;
 			}
 				.b-ordering-items-table p {
 					font-family: "RobotoSlab-Bold";
@@ -878,8 +883,8 @@ input:-moz-placeholder {
 					text-align: left !important;
 				}
 				.b-cart-item-img-name .b-img {
-					height: 70px;
-					width: 70px;
+					height: 62px;
+					width: 68px;
 					display: inline-block;
 					vertical-align: middle;
 					margin-right: 17px;
@@ -945,7 +950,7 @@ input:-moz-placeholder {
 			.b-cart-info-table-row {
 				width: 100%;
 				height: 44px;
-				border-bottom: 1px solid #F2EBDA;
+				border-bottom: 1px solid #f2ebda;
 				display: table;
 			}
 			.b-cart-info-table-row:last-child {
@@ -954,7 +959,7 @@ input:-moz-placeholder {
 			}
 			.b-cart-info-table-row:last-child p:before {
 				font-size: 17px;
-				line-height: 19px;
+				line-height: 29px;
 				color: #687734;
 			}
 				.b-cart-info-table-row p{
@@ -991,11 +996,11 @@ input:-moz-placeholder {
 
 					}
 					p.b-cart-summ {
-						font-family: "Intro";
+						font-family: "Introo";
 						font-size: 24px;
 						color: #687734;
 						text-align: right;
-						padding-top: 6px;
+						/* padding-top: 6px; */
 					}
 [class^="icon-"]:before, [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
