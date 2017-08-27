@@ -82,5 +82,6 @@ $(document).ready(function(){
         nextArrow: false,        
         infinite: true   
     });
+    $( "#spinner" ).spinner();
     
 });
