@@ -642,6 +642,7 @@ input:-moz-placeholder {
 }
 	.b-text h1,.b-text h2,.b-text h3,.b-text h4,.b-text h5,.b-text h6,.b-text a,.b-text p,.b-text ul {
 		width: 100%;
+		text-align: center;
 	}
 	.b-text h1 {
 		font-family: "Introo";
@@ -685,9 +686,7 @@ input:-moz-placeholder {
 		line-height: 26px;
 		color: #4A4A4A;
 	}
-	.b-text a {
-
-	}
+	.b-text a {display: block;}
 		.b-text a:hover {
 
 		}
@@ -1072,7 +1071,44 @@ input:-moz-placeholder {
 						content: "\2190";
 						margin-right: 5px;
 					}
-					
+.b-category {
+	padding-top: 40px;
+}
+	.b-category-cont {
+
+	}
+		.b-category ul {
+		}
+			.b-category .b-text li {
+				list-style: none;
+				display: inline-block;
+				width: calc((100% - 87px)/4);
+				height: 240px;
+				margin: 0;
+				margin-right: 25px;
+				padding: 17px;
+				box-sizing: border-box;
+				border: 2px solid #F2EBDA;
+				border-radius: 15px;
+				margin-bottom: 25px;
+				vertical-align: top;
+			}
+			.b-category .b-text li:nth-child(4n) {
+				margin: 0;
+			}
+				.b-category-item {
+
+				}
+					.b-category-img {
+						background-repeat: no-repeat;
+						background-position: 50% 50%;
+						width: 100%;
+						height: 130px;
+					}
+					.b-category h3 {
+						display: inline-block;
+						vertical-align: middle;
+					}
 [class^="icon-"]:before, [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
