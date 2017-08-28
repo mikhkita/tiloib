@@ -135,6 +135,12 @@ input.error,textarea.error{
 .cell {
 	display: table-cell;
 }
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
 input::-webkit-input-placeholder {
 	color: #434343;
 }
@@ -1062,6 +1068,11 @@ input:-moz-placeholder {
 						font-family: "RobotoSlab-Regular";
 						line-height: 26px;
 					}
+					.b-ordering-delivery-back:before {
+						content: "\2190";
+						margin-right: 5px;
+					}
+					
 [class^="icon-"]:before, [class*=" icon-"]:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;

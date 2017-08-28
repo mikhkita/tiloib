@@ -82,11 +82,27 @@ $(document).ready(function(){
         nextArrow: false,        
         infinite: true   
     });
-
-    $( "#spinner" ).spinner({
-        min: 0
-    });
-    //Set the start value
-   $( "#spinner" ).spinner( "value", 1 );
+    if ($(".b-cart").length) {
+        $( "#spinner" ).spinner({
+            min: 0
+        });
+        //Set the start value
+       $( "#spinner" ).spinner( "value", 1 );
+       $(".step1").click(function(e){
+            e.preventDefault();
+           $(".b-ordering-items").addClass("hide");
+           $(".b-ordering-items").removeClass("show");
+           $(".b-ordering-delivery").removeClass("hide");
+           $(".b-ordering-delivery").addClass("show");
+       });
+       $(".b-ordering-delivery-back").click(function(ev){
+            ev.preventDefault();
+           $(".b-ordering-delivery").removeClass("show");
+           $(".b-ordering-delivery").addClass("hide");
+           $(".b-ordering-items").addClass("show");
+           $(".b-ordering-items").removeClass("hide");
+       });       
+       
+    }
    
 });
