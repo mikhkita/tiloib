@@ -105,16 +105,13 @@ $(document).ready(function(){
        
     }
     if ($('.b-map-cont').length) {
-        $(".b-adresses a").click(function(eve){
-            eve.preventDefault();
-            $(".b-adresses a").removeClass('active');
-            $(this).addClass('active');
-        });
         var zoomm = 13;
-        var panto = new google.maps.LatLng(56.507841,84.97861);
-        var panto_irk = new google.maps.LatLng(56.5142726,85.0482779);
-        var panto_perv = new google.maps.LatLng(56.5200287,84.9628989);
-        var latlng = new google.maps.LatLng(56.5154711,85.0050281);
+        var panto_lenin = new google.maps.LatLng(56.47999,84.9518);
+        var panto_frunz = new google.maps.LatLng(56.4756052,84.9851);
+        var panto_glav = new google.maps.LatLng(56.4748468,85.0515);
+        var panto_nahim = new google.maps.LatLng(56.45486,84.976);
+        var panto_mira = new google.maps.LatLng(56.516855,84.979);
+        var latlng = new google.maps.LatLng(56.4739817,85.0801201);
         var settings = {
             zoom: zoomm,
             center: latlng,
@@ -127,69 +124,86 @@ $(document).ready(function(){
             };
         var map = new google.maps.Map(document.getElementById("map_canvas"), 
         settings);
-
-
-
         var companyLogo = new google.maps.MarkerImage('./i/map-marker-big.svg',
-        new google.maps.Size(100,130),
-        new google.maps.Point(0,0),
-        new google.maps.Point(25,32),
-        new google.maps.Size(50,65)
+        //new google.maps.Size(100,130),
+        null, null, new google.maps.Point(25,65),
+        // new google.maps.Point(0,65),
+         new google.maps.Size(50,65)
         );
-            var companyPos = new google.maps.LatLng(56.507841,84.97861);
-            var companyPos_irk = new google.maps.LatLng(56.5142726,85.0482779);
-            var companyPos_perv = new google.maps.LatLng(56.5200287,84.9628989);
+            var companyPos_lenin = new google.maps.LatLng(56.47999,84.95);
+            var companyPos_frunz = new google.maps.LatLng(56.4755032,84.9834);
+            var companyPos_glav = new google.maps.LatLng(56.474918,85.049629);
+            var companyPos_nahim = new google.maps.LatLng(56.45486,84.974);
+            var companyPos_mira = new google.maps.LatLng(56.516855,84.977);
 
-        var companyMarker = new google.maps.Marker({
-            position: companyPos,
-            map: map,
-            icon: companyLogo,
-            title:"Говорова"
-            });
-        var companyMarker_irk = new google.maps.Marker({
-            position: companyPos_irk,
-            map: map,
-            icon: companyLogo,
-            title:"Иркутском"
-            });
-        var companyMarker_perv = new google.maps.Marker({
-            position: companyPos_perv,
-            map: map,
-            icon: companyLogo,
-            title:"Первомайской"
-            });
 
+        var companyMarker_lenin = new google.maps.Marker({
+            position: companyPos_lenin,
+            map: map,
+            icon: companyLogo,
+            title:"На Ленина"
+            });
+        var companyMarker_frunz = new google.maps.Marker({
+            position: companyPos_frunz,
+            map: map,
+            icon: companyLogo,
+            title:"Фрунзенский рынок"
+            });
+        var companyMarker_glav = new google.maps.Marker({
+            position: companyPos_glav,
+            map: map,
+            icon: companyLogo,
+            title:"Главный"
+            });
+        var companyMarker_nahim = new google.maps.Marker({
+            position: companyPos_nahim,
+            map: map,
+            icon: companyLogo,
+            title:"Нахимова"
+            });
+        var companyMarker_mira = new google.maps.Marker({
+            position: companyPos_mira,
+            map: map,
+            icon: companyLogo,
+            title:"Мира"
+            });
         var coords = new google.maps.LatLng(56.508041,84.98091)
-
-        google.maps.event.addListener(companyMarker, 'click', function() {
-        map.panTo(panto); 
-        map.setZoom(17); 
-        $('.gov').removeClass("hide");
-        $('.irk').removeClass("show");
-        $('.perv').removeClass("show");
-        $('.gov').addClass("show");
-        $('.irk').addClass("hide");
-        $('.perv').addClass("hide");
+        google.maps.event.addListener(companyMarker_lenin, 'click', function() {
+            map.panTo(panto_lenin); 
+            map.setZoom(17); 
+            $('.b-map-adress').removeClass("show");
+            $(".b-map-adress.lenin").addClass('show');
         });
-        google.maps.event.addListener(companyMarker_irk, 'click', function() {
-        map.panTo(panto_irk); 
-        map.setZoom(17); 
-        $('.irk').removeClass("hide");
-        $('.gov').removeClass("show");
-        $('.perv').removeClass("show"); 
-        $('.irk').addClass("show");
-        $('.gov').addClass("hide");
-        $('.perv').addClass("hide");    
+        google.maps.event.addListener(companyMarker_frunz, 'click', function() {
+            map.panTo(panto_frunz); 
+            map.setZoom(17); 
+            $('.b-map-adress').removeClass("show");
+            $(".b-map-adress.frunz").addClass('show');
         });
-        google.maps.event.addListener(companyMarker_perv, 'click', function() {
-        map.panTo(panto_perv); 
-        map.setZoom(17); 
-        $('.perv').removeClass("hide");
-        $('.irk').removeClass("show");
-        $('.gov').removeClass("show");  
-        $('.perv').addClass("show");
-        $('.irk').addClass("hide");
-        $('.gov').addClass("hide"); 
+        google.maps.event.addListener(companyMarker_glav, 'click', function() {
+            map.panTo(panto_glav); 
+            map.setZoom(17); 
+            $('.b-map-adress').removeClass("show");
+            $(".b-map-adress.glav").addClass('show');
+        });   
+        google.maps.event.addListener(companyMarker_nahim, 'click', function() {
+            map.panTo(panto_nahim); 
+            map.setZoom(17); 
+            $('.b-map-adress').removeClass("show");
+            $(".b-map-adress.nahim").addClass('show'); 
+        }); 
+        google.maps.event.addListener(companyMarker_mira, 'click', function() {
+            map.panTo(panto_mira); 
+            map.setZoom(17); 
+            $('.b-map-adress').removeClass("show");
+            $(".b-map-adress.mira").addClass('show'); 
         });    
+        $(".b-adresses a").click(function(eve){
+            eve.preventDefault();
+            $(".b-adresses a").removeClass('active');
+            $(this).addClass('active');
+            var markerName = "companyMarker_"+$(this).attr('data-marker');
+            google.maps.event.trigger(eval(markerName),"click");
+        });                      
     }
 });
