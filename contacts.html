@@ -43,7 +43,7 @@
 	</ul>
 	<div class="b-left-block left">
 		<div class="b-block clearfix">
-			<a class="b-logo"></a>
+			<a href="index.html" class="b-logo"></a>
 		</div>
 		<div class="b-menu">
 			<ul>
@@ -83,7 +83,7 @@
 						<li><a href="#">Прайс лист</a></li>
 						<li><a href="#">Партнеры</a></li>
 						<li><a href="#">Новости</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
 					</ul>
 				</div>
 				<div class="b-search-block">
@@ -91,11 +91,12 @@
 					<a href="#" class="icon-map-marker">Томск</a>
 					<form action="">
 						<div class="b-search-field">
+							<a href="#" class="icon-search"></a>
 							<input type="text"  placeholder="Поиск по сайту">
 						</div>
 						<input type="submit" class="b-btn-search icon-search">
 					</form>
-					<a href="#" class="b-btn-green b-btn-cart icon-cart">1 800<span class="icon-rub"></span></a>
+					<a href="cart.html" class="b-btn-green b-btn-cart icon-cart">1 800<span class="icon-rub"></span></a>
 				</div>
 			</div>
 		</div>
@@ -103,22 +104,48 @@
 			<div class="b-block">
 				<div class="b-contacts-page">
 					<h1>Контакты</h1>
+					<ul class="nav-map-city">
+						<li class="nav-map-city-active" nav-id="1">Томск</li>
+						<li nav-id="2">Барнаул</li>
+						<li nav-id="3">Новосибирск</li>
+					</ul>
 					<div class="b-adresses">
-						<ul>
-							<li><a data-marker="glav" href="#">Главный офис</a></li>
-							<li><a data-marker="frunz" href="#">Фирменный магазин "Фрунзенский рынок"</a></li>
-							<li><a data-marker="lenin" href="">Фирменный магазин на Ленина</a></li>
-						</ul>
-						<ul>
-							<li><a data-marker="nahim" href="#">Фирменный магазин на Южной</a></li>
-							<li><a data-marker="mira" href="#">Фирменный магазин в ТЦ "Волна"</a></li>
-						</ul>
+						<div class="tomsk selected" data-nav-id="1">
+							<ul>
+								<li><a data-marker="glav" href="#">Главный офис</a></li>
+								<li><a data-marker="frunz" href="#">Фирменный магазин "Фрунзенский рынок"</a></li>
+								<li><a data-marker="lenin" href="#">Фирменный магазин на Ленина</a></li>
+							</ul>
+							<ul>
+								<li><a data-marker="nahim" href="#">Фирменный магазин на Южной</a></li>
+								<li><a data-marker="mira" href="#">Фирменный магазин в ТЦ "Волна"</a></li>
+							</ul>						
+						</div>
+						<div class="barnaul" data-nav-id="2">
+							<ul>
+								<li><a data-marker="glav" href="#">Главный офис</a></li>
+								<li><a data-marker="frunz" href="#">Фирменный магазин "Фрунзенский рынок"</a></li>
+								<li><a data-marker="lenin" href="#">Фирменный магазин на Ленина</a></li>
+							</ul>
+							<ul>
+								<li><a data-marker="mira" href="#">Фирменный магазин в ТЦ "Волна"</a></li>
+							</ul>
+						</div>
+						<div class="novosibirsk" data-nav-id="3">
+							<ul>
+								<li><a data-marker="glav" href="#">Главный офис</a></li>
+								<li><a data-marker="frunz" href="#">Фирменный магазин "Фрунзенский рынок"</a></li>
+								<li><a data-marker="lenin" href="#">Фирменный магазин на Ленина</a></li>
+							</ul>
+							<ul>
+							</ul>
+						</div>						
 					</div>
 					<div class="b-map">
 						<div class="b-map-cont" id="map_canvas">
 						</div>
 						<div class="b-map-adress glav show">
-							<a href="" class="b-btn-close icon-close"></a>
+							<a href="#" class="b-btn-close icon-close"></a>
 							<h2>Биолит</h2>
 							<span>Главный офис</span>
 							<br>
@@ -134,7 +161,7 @@
 							<a href="tel:+73822491921">+7 (3822) 49-19-21</a>
 						</div>
 						<div class="b-map-adress frunz">
-							<a href="" class="b-btn-close icon-close"></a>
+							<a href="#" class="b-btn-close icon-close"></a>
 							<h2>Биолит</h2>
 							<span>Фирменный магазин "Фрунзенский рынок"</span>
 							<br>
@@ -150,7 +177,7 @@
 							<a href="tel:+73822491921">+7 (3822) 49-19-21</a>
 						</div>
 						<div class="b-map-adress lenin">
-							<a href="" class="b-btn-close icon-close"></a>
+							<a href="#" class="b-btn-close icon-close"></a>
 							<h2>Биолит</h2>
 							<span>Фирменный магазин на Ленина</span>
 							<br>
@@ -166,7 +193,7 @@
 							<a href="tel:+73822491921">+7 (3822) 49-19-21</a>
 						</div>
 						<div class="b-map-adress nahim">
-							<a href="" class="b-btn-close icon-close"></a>
+							<a href="#" class="b-btn-close icon-close"></a>
 							<h2>Биолит</h2>
 							<span>Фирменный магазин на Южной</span>
 							<br>
@@ -182,7 +209,7 @@
 							<a href="tel:+73822491921">+7 (3822) 49-19-21</a>
 						</div>
 						<div class="b-map-adress mira">
-							<a href="" class="b-btn-close icon-close"></a>
+							<a href="#" class="b-btn-close icon-close"></a>
 							<h2>Биолит</h2>
 							<span>Фирменный магазин в ТЦ "Волна"</span>
 							<br>
@@ -205,7 +232,7 @@
 			<div class="b-block">
 				<div class="b-footer-menu-cont">
 					<div class="b-logo-contacts left">
-						<a href="#" class="b-logo"></a>
+						<a href="index.html" class="b-logo"></a>
 						<div class="b-contacts">
 							<div class="b-contacts-market">
 								<h3>Интернет-магазин</h3>
@@ -240,14 +267,14 @@
 								<li><a href="#">Как купить?</a></li>
 								<li><a href="#">Гарантия</a></li>
 								<li><a href="#">Доставка</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="contacts.html">Контакты</a></li>
 							</ul>
 						</div>
 						<div class="b-footer-col">
 							<h3>Рассылка</h3>
 							<form action="">
 								<input type="text" placeholder="Введите ваш E-mail">
-								<button href="" type="submit" class="b-btn-green">Подписаться</button>
+								<button href="#" type="submit" class="b-btn-green">Подписаться</button>
 							 </form>
 						</div>
 					</div>						

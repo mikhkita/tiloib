@@ -90,18 +90,45 @@ $(document).ready(function(){
        $( "#spinner" ).spinner( "value", 1 );
        $(".step1").click(function(e){
             e.preventDefault();
-           $(".b-ordering-items").addClass("hide");
-           $(".b-ordering-items").removeClass("show");
-           $(".b-ordering-delivery").removeClass("hide");
+           $(".b-ordering div").removeClass("show");
            $(".b-ordering-delivery").addClass("show");
+            $(".b-ordering-process>ul>li").removeClass("current-step");
+            $(".nav-step2").addClass("current-step");           
        });
+       $(".step2").click(function(event){
+            event.preventDefault();
+           $(".b-ordering div").removeClass("show");
+           $(".b-ordering-pay").addClass("show");
+            $(".b-ordering-process>ul>li").removeClass("current-step");
+            $(".nav-step3").addClass("current-step");           
+       });       
        $(".b-ordering-delivery-back").click(function(ev){
             ev.preventDefault();
-           $(".b-ordering-delivery").removeClass("show");
-           $(".b-ordering-delivery").addClass("hide");
+           $(".b-ordering div").removeClass("show");
            $(".b-ordering-items").addClass("show");
-           $(".b-ordering-items").removeClass("hide");
-       });       
+            $(".b-ordering-process>ul>li").removeClass("current-step");
+            $(".nav-step1").addClass("current-step");           
+       });  
+       $(".b-ordering-process>ul>li").click(function(){
+            if($(this).hasClass("current-step")){
+            }
+            else {
+                $(".b-ordering-process>ul>li").removeClass("current-step");
+                $(this).addClass("current-step");
+                if ($(this).hasClass("nav-step1")){
+                   $(".b-ordering div").removeClass("show");
+                   $(".b-ordering-items").addClass("show"); 
+                }
+                else if ($(this).hasClass("nav-step2")) {
+                   $(".b-ordering div").removeClass("show");
+                   $(".b-ordering-delivery").addClass("show");
+                }
+                else if ($(this).hasClass("nav-step3")){
+                   $(".b-ordering div").removeClass("show");
+                   $(".b-ordering-pay").addClass("show");
+                }
+            }
+       });
        
     }
     if ($('.b-map-cont').length) {
@@ -204,6 +231,17 @@ $(document).ready(function(){
             $(this).addClass('active');
             var markerName = "companyMarker_"+$(this).attr('data-marker');
             google.maps.event.trigger(eval(markerName),"click");
-        });                      
+        }); 
+        $(".b-btn-close").click(function(close){
+            close.preventDefault();
+            $('.b-map-adress').removeClass("show");
+        }) 
+        $(".nav-map-city li").click(function(){
+            $(".nav-map-city li").removeClass("nav-map-city-active");
+            $(this).addClass("nav-map-city-active");
+            $(".b-adresses>div").removeClass("selected");
+            var dataCityId = $(this).attr("nav-id");
+            $("[data-nav-id="+dataCityId+"]").addClass("selected");
+        });
     }
 });

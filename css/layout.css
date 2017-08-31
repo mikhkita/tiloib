@@ -343,7 +343,19 @@ input:-moz-placeholder {
 					border-radius: 100px;
 					display: inline-block;
 					margin-right: 30px;
-				}		
+				}
+					.b-search-field a {
+						display: block;
+						position: absolute;
+						right: 0;
+						top: 0;
+						z-index: 2;
+						width: 50px;
+						height: 50px;
+						box-sizing: border-box;
+						padding: 16px 20px 16px 10px;
+						cursor: pointer;
+					}	
 				.b-search-field input {
 					display: inline-block;
 					width: 329px;
@@ -801,6 +813,7 @@ input:-moz-placeholder {
 			.b-ordering-process li {
 				display: table-cell;
 				vertical-align: middle;
+				cursor: pointer;
 			}
 			.current-step {
 				color: #687734 !important;
@@ -837,6 +850,9 @@ input:-moz-placeholder {
 					background-color: #a0762c;
 					margin: 0 9px;
 				}
+		.b-ordering-items {
+			display: none;
+		}
 		.b-ordering-items-table {
 			width: 100%;
 			border-collapse: collapse;
@@ -1008,6 +1024,7 @@ input:-moz-placeholder {
 						/* padding-top: 6px; */
 					}
 					.b-ordering-delivery {
+						display: none;
 						color: #4A4A4A;
 						font-size: 14px;
 					}
@@ -1052,8 +1069,23 @@ input:-moz-placeholder {
 						border: 1px solid #D8D8D8;
 						border-radius: 50%;
 					}
+					input[type=radio]:checked + label:after {
+					    content: "";
+					    display: block;
+					    position: absolute;
+					    top: 6px;
+					    left: 2px;
+					    width: 7px;
+					    height: 7px;
+					    background-color: #687734;
+					    font-size: 24px;
+					    text-align: center;
+					    line-height: 10px;
+					    border-radius: 50%;
+					    text-indent: 1px;
+					}
 					input[type=radio]:checked + label:before {
-					    content: "\2022";
+					    content: "";
 					    color: #687734;
 					    font-size: 24px;
 					    text-align: center;
@@ -1071,6 +1103,16 @@ input:-moz-placeholder {
 						content: "\2190";
 						margin-right: 5px;
 					}
+				.b-ordering-pay {
+					display: none;
+					width: 100%;
+				}
+				.b-ordering-pay-body{
+					width: 100%;
+					height: 300px;
+					border: 1px solid #687734;
+					border-radius: 15px;
+				}
 .b-category {
 	padding-top: 40px;
 }
@@ -1121,11 +1163,54 @@ input:-moz-placeholder {
 .b-contacts-page {
 	padding-top: 40px;
 }
-	.b-adresses {
+	.b-contacts-page .nav-map-city {
 
 	}
-		.b-adresses ul {display: inline-block;width: calc((100% - 4px)/2);margin-bottom: 16px;vertical-align: top;}
-			.b-adresses li {margin-bottom: 12px;}
+		.b-contacts-page .nav-map-city li {
+			display: inline-block;
+			background-color: #ede2c5;
+			height: 36px;
+			line-height: 36px;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+			border-radius: 15px 15px 0 0;
+			padding: 0 24px;
+			cursor: pointer;
+		}	
+		.nav-map-city-active {
+			background-color: #f7f3e9 !important;
+		}
+	.b-adresses {
+		margin-bottom: 24px;
+		background-color: #f7f3e9;
+		border-radius: 0 15px 15px;
+		box-sizing: border-box;
+		padding: 15px 24px;
+	}
+		.b-adresses .tomsk {
+
+		}
+		.b-adresses .barnaul {
+
+		}
+		.b-adresses .novosibirsk {
+
+		}
+		.b-adresses>div {
+			display: none;
+		}
+		.b-adresses .selected {
+			display: block;
+		}
+		.b-adresses ul {
+			display: inline-block;
+			width: calc((100% - 4px)/2);
+			/* margin-bottom: 16px; */
+			vertical-align: top;
+		}
+			.b-adresses li {
+				margin-bottom: 12px;
+			}
 				.b-adresses a {
 					border-bottom: 1px dashed #979797;
 					line-height: 32px;
@@ -1157,10 +1242,19 @@ input:-moz-placeholder {
 			}
 				.b-btn-close {
 					position: absolute;
-					top: 16px;
-					right: 16px;
+					top: 6px;
+					right: 6px;
+					display: block;
+					width: 36px;
+					height: 36px;
 				}
-				.b-map-adress a {color: #4a4a4a;line-height: 26px;}
+				.b-btn-close:hover:before {
+					color: #a0762c;
+				}
+				.b-map-adress a {
+					color: #4a4a4a;
+					line-height: 26px;
+				}
 				.b-map-adress h2 {
 					font-family: "RobotoSlab-Bold";
 				}
@@ -1215,6 +1309,10 @@ input:-moz-placeholder {
 .icon-close:before {
   content: "\e906";
   color: #b2ac88;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
 }
 .icon-rub:before {
   content: "\e900";
@@ -1228,6 +1326,7 @@ input:-moz-placeholder {
 .icon-search:before {
   content: "\e901";
   color: #687734;
+  font-size: 18px;
 }
 .icon-map-marker:before {
   content: "\e902";
