@@ -124,21 +124,31 @@ $(document).ready(function(){
                    $(".b-ordering-delivery").addClass("show");
                 }
                 else if ($(this).hasClass("nav-step3")){
-                   $(".b-ordering div").removeClass("show");
-                   $(".b-ordering-pay").addClass("show");
+                    if ($(".b-ordering-delivery input:checked").length) {
+                       $(".b-ordering div").removeClass("show");
+                       $(".b-ordering-pay").addClass("show");
+                    }
+                    else {
+                        $(".b-ordering-process>ul>li").removeClass("current-step");
+                       $(".b-ordering div").removeClass("show");
+                       $(".b-ordering-delivery").addClass("show");                        
+                        $(".nav-step2").addClass("current-step");   
+                        $(".b-radio").addClass("delivery-error");                       
+                        //error();
+                    }
                 }
             }
        });
        
     }
     if ($('.b-map-cont').length) {
-        var zoomm = 13;
+        var zoomm = 12;
         var panto_lenin = new google.maps.LatLng(56.47999,84.9518);
         var panto_frunz = new google.maps.LatLng(56.4756052,84.9851);
         var panto_glav = new google.maps.LatLng(56.4748468,85.0515);
         var panto_nahim = new google.maps.LatLng(56.45486,84.976);
         var panto_mira = new google.maps.LatLng(56.516855,84.979);
-        var latlng = new google.maps.LatLng(56.4739817,85.0801201);
+        var latlng = new google.maps.LatLng(56.49,85.06);
         var settings = {
             zoom: zoomm,
             center: latlng,

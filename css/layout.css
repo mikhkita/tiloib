@@ -1069,6 +1069,9 @@ input:-moz-placeholder {
 						border: 1px solid #D8D8D8;
 						border-radius: 50%;
 					}
+					.b-radio.delivery-error:before {
+						box-shadow: 0px 0px 0px 1px #ff0000;
+					}
 					input[type=radio]:checked + label:after {
 					    content: "";
 					    display: block;
@@ -1360,7 +1363,135 @@ input:-moz-placeholder {
 		background-image: url("../i/header-hd.jpg");
 	}
 }
-@media screen and (max-width: 1250px){
+@media screen and (max-width: 1280px){
+	body {
+		min-width: 600px;
+	}
+	.b-body-block {
+		min-width: 400px;
+	}
+	.b-block {
+
+	}
+	.b-header {
+	}
+		.b-header .b-block {
+		}
+			.b-header .b-menu {
+				}
+			.b-header .b-menu li{
+			}	
+			.b-header .b-menu li:last-child {
+			}
+			.b-header .b-menu a {
+			}	
+			.b-header .b-menu a:hover {
+			}	
+			.b-search-block {
+			}
+				.b-search-block form{
+				}			
+				.b-search-block>span {
+				}
+				.b-search-block .icon-map-marker {
+				}	
+				}
+				.b-search-field {
+				}
+					.b-search-field a {
+					}	
+				.b-search-field input {
+				}
+					}
+
+					}					
+				.b-btn-search {
+				}
+			.b-btn-cart {
+			}
+			.b-product-slider {
+			}
+				.b-slider-item {
+				}
+					.b-slider-item h2 {
+					}	
+					.b-slider-item p {
+					}											
+					.b-slider-item .b-block {
+					}
+						.b-slider-text {
+						}
+						.b-slider-img {
+						}
+						.b-btn-green {
+
+						}
+				.b-img {
+				}
+	.b-content {
+
+	}
+			.b-content .b-block {
+			}
+				.b-popular {
+				}
+				.b-catalog-container {
+				}
+					.b-product-card {
+					}
+					}
+					.b-product-url {
+					}
+						.b-product-card .b-img {
+						}
+						.b-product-card h3 {
+						}
+						.b-product-card h3 {
+						}
+							.b-product-card h3:hover  {
+							}										
+						.b-product-card span {
+						}
+						.b-product-card .icon-rub {
+						}
+							}
+						.b-product-card .b-btn-green {
+						}
+	.b-footer {
+	}
+			.b-footer .b-block {
+			}
+				.b-footer-menu-cont {
+				}
+					.b-logo-contacts {
+
+					}
+						.b-footer .b-logo {
+						}
+						.b-contacts h3 {
+						}
+						.b-contacts p a {
+						}						
+					.b-footer-menu {
+					}
+						.b-footer-col {
+						}
+							.b-footer-col h3 {
+							}
+							.b-footer-col li a {
+							}
+							.b-footer-col li a:hover {
+							}							
+							.b-footer-col input {
+							}
+							.b-footer-col .b-btn-green {
+							}
+					.b-copiright {
+					}
+						.b-copiright a {
+						}
+							.b-copiright a:hover {
+							}				
 	
 }
 @media screen and (max-width: 1020px){
