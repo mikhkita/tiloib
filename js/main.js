@@ -142,13 +142,16 @@ $(document).ready(function(){
        
     }
     if ($('.b-map-cont').length) {
-        var zoomm = 12;
+        var zoomm = Number($(".nav-map-city-active").attr("data-zoom"));
         var panto_lenin = new google.maps.LatLng(56.47999,84.9518);
         var panto_frunz = new google.maps.LatLng(56.4756052,84.9851);
         var panto_glav = new google.maps.LatLng(56.4748468,85.0515);
         var panto_nahim = new google.maps.LatLng(56.45486,84.976);
         var panto_mira = new google.maps.LatLng(56.516855,84.979);
-        var latlng = new google.maps.LatLng(56.49,85.06);
+        var current_city_coord = $(".nav-map-city-active").attr("data-point").split(",");
+        var mapg = Number(current_city_coord[0]);
+        var mapv = Number(current_city_coord[1]);
+        var latlng = new google.maps.LatLng(mapg,mapv);
         var settings = {
             zoom: zoomm,
             center: latlng,
@@ -252,6 +255,13 @@ $(document).ready(function(){
             $(".b-adresses>div").removeClass("selected");
             var dataCityId = $(this).attr("nav-id");
             $("[data-nav-id="+dataCityId+"]").addClass("selected");
+            current_city_coord = $(".nav-map-city-active").attr("data-point").split(",");
+            mapg = Number(current_city_coord[0]);
+            mapv = Number(current_city_coord[1]);     
+            var zoomm = Number($(".nav-map-city-active").attr("data-zoom"));       
+            var panto_city = new google.maps.LatLng(mapg,mapv);
+            map.panTo(panto_city); 
+            map.setZoom(zoomm);
         });
     }
 });
