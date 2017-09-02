@@ -703,7 +703,7 @@ input:-moz-placeholder {
 		line-height: 26px;
 		color: #4A4A4A;
 	}
-	.b-text a {display: block;padding: 17px;box-sizing: border-box;}
+	.b-text a {display: block;padding: 25px 17px 12px;box-sizing: border-box;}
 		.b-text a:hover {
 
 		}
@@ -1133,7 +1133,7 @@ input:-moz-placeholder {
 				list-style: none;
 				display: inline-block;
 				width: calc((100% - 87px)/4);
-				height: 240px;
+				height: auto;
 				margin: 0;
 				padding: 0;
 				margin-right: 25px;
@@ -1520,9 +1520,9 @@ input:-moz-placeholder {
 
 	.b-category-img {
 		background-size: contain;
-		width: 70%;
+		width: 50%;
 		margin: 0 auto;
-		height: 130px;
+		height: 94px;
 	}
 	.b-category .b-text li {
 
