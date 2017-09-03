@@ -1402,3 +1402,42 @@ body {
 		width: 100%;
 	}
 }
+@media screen and (max-width: 490px) {
+	.b-footer {
+		background-image: none;
+		height: initial;
+		padding-bottom: 24px;
+	}
+	.b-footer .b-block {padding: 0;width: 100%;}
+	.b-footer-menu-cont {
+		height: initial;
+		box-shadow: none;
+		border-radius: 0;
+		margin-bottom: 24px;
+	}
+	.b-logo-contacts {
+		display: inline-block;
+		float: none !important;
+		vertical-align: top;
+		margin-right: 24px;
+		margin-bottom: 24px;
+	}
+	.b-footer-menu {
+		display: inline-block;
+		float: none !important;
+		vertical-align: top;
+		min-width: 120px;
+		width: initial;
+	}
+	.b-footer-col {
+		display: block;
+		margin right: 0;
+		margin-right: 0;
+		width: initial;
+		padding-left: 0;
+	}
+	.b-copiright {
+		/* margin-bottom: 24px; */
+		width: 90%;
+		margin: 0 auto;
+}

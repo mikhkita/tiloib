@@ -28,6 +28,8 @@ $(document).ready(function(){
             myHeight = document.body.clientHeight;
         }
         mydevice(); 
+        slideOutClosePc ();
+
     }
     $(window).resize(resize);
     resize();
@@ -122,6 +124,11 @@ $(document).ready(function(){
 
         return false;
     });
+    function slideOutClosePc () {
+        if (mobile == false) {
+            slideout.close();
+        }
+    }
 
     $('.b-product-slider').slick({
         dots: true,
