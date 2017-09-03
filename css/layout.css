@@ -190,7 +190,10 @@ input:-moz-placeholder {
 	.slick-dots li {
 		display: inline-block;
 		/* height: 36px; */
-	}	
+	}
+.mobile-only {
+	display: none !important;
+}	
 .b-left-block {
 	background-color: #B2AD88;
 	width: 200px;
@@ -277,6 +280,13 @@ input:-moz-placeholder {
 		/* padding-bottom: 48px; */
 		overflow: hidden;
 	}
+	.b-header .b-logo {
+		background-image: url('../i/logo-green.png');
+		display: inline-block;
+		vertical-align: middle;
+		/* margin-bottom: 24px; */
+		margin-right: 10%;
+	}
 		.b-header .b-block {
 			box-sizing: border-box;
 			padding-top: 38px;
@@ -308,14 +318,16 @@ input:-moz-placeholder {
 			}	
 			.b-search-block {
 				text-align: right;
-				/* margin-bottom: 51px; */
+				margin-bottom: 53px;
 			}
+			.b-search-block-top {/* margin-bottom: 24px; */display: inline-block;vertical-align: middle;}
+			.b-search-block-bottom {display: inline-block;vertical-align: middle;}
 				.b-search-block form{
 					display: inline-block;
 					position: relative;
 					vertical-align: middle;
 				}			
-				.b-search-block>span {
+				.b-search-block .b-search-block-top>span {
 					font-family: "RobotoSlab-Bold";
 					color: #A0762C;
 					font-size: 16px;
@@ -414,7 +426,7 @@ input:-moz-placeholder {
 				position: relative;
 			}
 			.b-product-slider {
-				margin-top: 53px;
+				/* margin-top: 53px; */
 				width: 1000px;
 				height: 359px;
 				background-color: #F7F3E9;
@@ -1373,6 +1385,10 @@ input:-moz-placeholder {
 }
 .icon-menu:before {
   content: "\e904";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  font-size: 21px;
 }
 .icon-rub {
 	position: relative;
@@ -1851,7 +1867,7 @@ input:-moz-placeholder {
 						.b-footer-col {
 						/* width: initial; */
 						}
-							.b-footer-col:nth-child(2) {
+							.b-footer-col:nth-child(1) {
 								display: none;
 							}
 							.b-footer-col h3 {
@@ -1920,7 +1936,7 @@ input:-moz-placeholder {
 					.b-header .b-menu li:first-child {
 						margin-left: 0px;
 					}	
-					.b-search-block>span {
+					.b-search-block .b-search-block-top>span {
 						display: none;
 					}		
 }
@@ -1945,12 +1961,16 @@ input:-moz-placeholder {
 					.b-footer-col:nth-child(1) {
 						display: none;
 					}
+					.b-footer-col:nth-child(2) {
+						display: none;
+					}					
 					.b-header .b-menu a {
 
 					}
 					.b-header .b-menu li {
 						margin: 0 0;
 					}
+
 	.b-category .b-text li {
 		/* height: 214px; */
 		width: calc((100% - 29px)/2);
