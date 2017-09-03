@@ -1,7 +1,20 @@
 var progress = new KitProgress("#687734",3);
 $(document).ready(function(){	
     progress.endDuration = 0.3;
-
+    function mydevice () {
+        pc = false; 
+        tablet = false;
+        mobile = false;
+        if (myWidth>=1440) {
+            pc = true;
+        }
+        else    if (myWidth>768) {
+            tablet = true; 
+        }
+        else {
+            mobile = true;
+        }  
+    } 
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -14,6 +27,7 @@ $(document).ready(function(){
             myWidth = document.body.clientWidth;
             myHeight = document.body.clientHeight;
         }
+        mydevice(); 
     }
     $(window).resize(resize);
     resize();
@@ -298,6 +312,7 @@ $(document).ready(function(){
             map.setZoom(zoomm);
         });
     }
+
 });
 
 var lastWait = [];
