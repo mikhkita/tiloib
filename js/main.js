@@ -1,4 +1,7 @@
+var progress = new KitProgress("#687734",3);
 $(document).ready(function(){	
+    progress.endDuration = 0.3;
+
     function resize(){
        if( typeof( window.innerWidth ) == 'number' ) {
             myWidth = window.innerWidth;
@@ -41,40 +44,71 @@ $(document).ready(function(){
     }
     $.fn.placeholder();
     
-	// var myPlace = new google.maps.LatLng(55.754407, 37.625151);
- //    var myOptions = {
- //        zoom: 16,
- //        center: myPlace,
- //        mapTypeId: google.maps.MapTypeId.ROADMAP,
- //        disableDefaultUI: true,
- //        scrollwheel: false,
- //        zoomControl: true
- //    }
- //    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+    // Добавление в корзину
+	$("body").on("click",".b-btn-to-cart",function(){
+        var url = $(this).attr("href"); 
 
- //    var marker = new google.maps.Marker({
-	//     position: myPlace,
-	//     map: map,
-	//     title: "Ярмарка вакансий и стажировок"
-	// });
+        if( $("input[name=quantity]").length ){
+            url = url + "&quantity=" + $("input[name=quantity]").val();
+        }
+        progress.start(1.5);
+        $.ajax({
+            type: "GET",
+            url: url,
+            success: function(msg){
+                progress.end();
+                var json = JSON.parse(msg);
 
-    //  var options = {
-    //     $AutoPlay: true,                                
-    //     $SlideDuration: 500,                            
+                if( json.result == "success" ){
+                    if( json.count != "0" ){
+                        $(".b-btn-cart").removeAttr("onclick");
+                    }else{
+                        $(".b-btn-cart").attr("onclick", "return false;");
+                    }
+                    $(".b-cart-num").text(json.count);
+                }else{
+                    alert("Ошибка добавления в корзину");
+                }
+            }
+        });
+        return false;
+    });
 
-    //     $BulletNavigatorOptions: {                      
-    //         $Class: $JssorBulletNavigator$,             
-    //         $ChanceToShow: 2,                           
-    //         $AutoCenter: 1,                            
-    //         $Steps: 1,                                  
-    //         $Lanes: 1,                                  
-    //         $SpacingX: 10,                              
-    //         $SpacingY: 10,                              
-    //         $Orientation: 1                             
-    //     }
-    // };
+    // Поиск города
+    $(".b-city-input").change(function(){
+        if( $(this).val() != "" ){
+            $(".b-choose-city").removeClass("disabled");
+        }else{
+            $(".b-choose-city").addClass("disabled");
+        }
+    });
 
-    // var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+    // Выбор города
+    $(".b-choose-city").click(function(){
+        if( $(this).hasClass("disabled") ) return false;
+
+        var url = $(this).attr("href") + "&LOCATION=" + $(".b-city-input").val() + "&NAME=" + $(".bx-ui-sls-fake").attr("title");
+
+        progress.start(1.5);
+        $.ajax({
+            type: "GET",
+            url: url,
+            success: function(msg){
+                progress.end();
+                var json = JSON.parse(msg);
+
+                $.fancybox.close();
+                if( json.result == "success" ){
+                    $(".b-city-butt").text(json.city);
+                }else{
+                    alert("Ошибка добавления в корзину");
+                }
+            }
+        });
+
+        return false;
+    });
+
     $('.b-product-slider').slick({
         dots: true,
         slidesToShow: 1,
@@ -265,3 +299,80 @@ $(document).ready(function(){
         });
     }
 });
+
+var lastWait = [];
+    /* non-xhr loadings */
+    BX.showWait = function (node, msg)
+    {
+        node = BX(node) || document.body || document.documentElement;
+        msg = msg || BX.message('JS_CORE_LOADING');
+
+        var container_id = node.id || Math.random();
+
+        var obMsg = node.bxmsg = document.body.appendChild(BX.create('DIV', {
+            props: {
+                id: 'wait_' + container_id,
+                className: 'bx-core-waitwindow'
+            },
+            text: msg
+        }));
+
+        setTimeout(BX.delegate(_adjustWait, node), 10);
+
+        progress.start(3);
+        lastWait[lastWait.length] = obMsg;
+        return obMsg;
+    };
+
+    BX.closeWait = function (node, obMsg)
+    {
+        progress.end();
+        if (node && !obMsg)
+            obMsg = node.bxmsg;
+        if (node && !obMsg && BX.hasClass(node, 'bx-core-waitwindow'))
+            obMsg = node;
+        if (node && !obMsg)
+            obMsg = BX('wait_' + node.id);
+        if (!obMsg)
+            obMsg = lastWait.pop();
+
+        if (obMsg && obMsg.parentNode)
+        {
+            for (var i = 0, len = lastWait.length; i < len; i++)
+            {
+                if (obMsg == lastWait[i])
+                {
+                    lastWait = BX.util.deleteFromArray(lastWait, i);
+                    break;
+                }
+            }
+
+            obMsg.parentNode.removeChild(obMsg);
+            if (node)
+                node.bxmsg = null;
+            BX.cleanNode(obMsg, true);
+        }
+    };
+
+    function _adjustWait()
+    {
+        if (!this.bxmsg)
+            return;
+
+        var arContainerPos = BX.pos(this),
+            div_top = arContainerPos.top;
+
+        if (div_top < BX.GetDocElement().scrollTop)
+            div_top = BX.GetDocElement().scrollTop + 5;
+
+        this.bxmsg.style.top = (div_top + 5) + 'px';
+
+        if (this == BX.GetDocElement())
+        {
+            this.bxmsg.style.right = '5px';
+        }
+        else
+        {
+            this.bxmsg.style.left = (arContainerPos.right - this.bxmsg.offsetWidth - 5) + 'px';
+        }
+    }

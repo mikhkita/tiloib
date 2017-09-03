@@ -1,0 +1,9 @@
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://biolit.shop/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://biolit.shop/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://biolit.shop/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://biolit.shop/apple-touch-icon-76x76.png" />
+<link rel="icon" type="image/png" href="http://biolit.shop/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://biolit.shop/favicon-16x16.png" sizes="16x16" />
+<meta name="application-name" content="Биолит"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-square70x70logo" content="http://biolit.shop/mstile-70x70.png" />
