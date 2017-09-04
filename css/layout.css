@@ -1395,9 +1395,9 @@ input:-moz-placeholder {
 .icon-menu:before {
   content: "\e904";
   position: absolute;
-  top: 7px;
-  left: 7px;
-  font-size: 21px;
+  top: 9px;
+  left: 9px;
+  font-size: 17px;
   color: #ffffff;
 }
 .icon-rub {
