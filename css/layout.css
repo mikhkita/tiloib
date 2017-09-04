@@ -1389,6 +1389,7 @@ input:-moz-placeholder {
   top: 7px;
   left: 7px;
   font-size: 21px;
+  color: #ffffff;
 }
 .icon-rub {
 	position: relative;
