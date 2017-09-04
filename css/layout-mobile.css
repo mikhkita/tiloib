@@ -469,7 +469,7 @@ body {
 						overflow: hidden;
 					}											
 					.b-slider-item .b-block {
-						width: calc(100% - 10%);
+						width: calc(100% - 15%);
 						padding: 35px 0;
 						padding-bottom: 65px;
 						height: initial;
