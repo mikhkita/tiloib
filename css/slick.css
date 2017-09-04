@@ -134,7 +134,7 @@
     margin-top: 0px;
 }
 .slick-dots li:hover button:after {
-    background-color: #999999;
+    background-color: #a0762c;
 }
 .slick-dots .slick-active button:after{
     background-color: #687734;

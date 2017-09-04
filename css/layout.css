@@ -164,7 +164,8 @@ input:-moz-placeholder {
 	.b-orange-butt:hover{
 		
 	}
-.b-btn-green {
+.b-btn-green,
+.b-btn-orange {
 	font-family: "Introo";
 	color: #ffffff;
 	font-size: 12px;
@@ -176,8 +177,14 @@ input:-moz-placeholder {
 	border: none;
 	cursor: pointer;
 }
+.b-btn-orange{
+	background-color: #a0762c;
+}
 	.b-btn-green:hover {
-		background-color: #a0762c;
+		background-color: #566328;
+	}
+	.b-btn-orange:hover{
+		background-color: #8e6620;
 	}
 .slick-dots {
 	position: absolute;
@@ -290,7 +297,7 @@ input:-moz-placeholder {
 		.b-header .b-block {
 			box-sizing: border-box;
 			padding-top: 38px;
-			padding-bottom: 52px;
+			/*padding-bottom: 52px;*/
 		}
 			.b-header .b-menu {
 				width: 100%;
@@ -427,6 +434,7 @@ input:-moz-placeholder {
 			}
 			.b-product-slider {
 				/* margin-top: 53px; */
+				margin-bottom: 52px;
 				width: 1000px;
 				height: 359px;
 				background-color: #F7F3E9;
@@ -510,8 +518,8 @@ input:-moz-placeholder {
 						border: 2px solid #F2EBDA;
 						border-radius: 15px;
 						box-sizing: border-box;
-						height: 344px;
-						padding: 24px;
+						height: 350px;
+						padding: 24px 20px;
 						display: inline-block;
 						margin-bottom: 25px;
 						position: relative;
@@ -568,7 +576,7 @@ input:-moz-placeholder {
 							color: #4A4A4A;
 							height: 60px;
 							overflow: hidden;
-							margin-bottom: 7px;
+							margin-bottom: 10px;
 						}
 							.b-product-card h3:hover  {
 								text-decoration: underline;
@@ -579,7 +587,7 @@ input:-moz-placeholder {
 							line-height: 24px;
 							color: #687734;
 							display: inline-block;
-							width: calc(100% - 98px);
+							width: calc(100% - 104px);
 							vertical-align: middle;
 						}
 						.b-product-card .icon-rub {
@@ -596,7 +604,7 @@ input:-moz-placeholder {
 						.b-product-card .b-btn-green {
 							display: inline-block;
 							vertical-align: middle;
-							padding: 4px 11px 2px 11px;
+							padding: 7px 14px 5px;
 						}
 	.b-footer {
 		background-image: url('../i/footer.jpg');
@@ -1471,8 +1479,8 @@ input:-moz-placeholder {
 
 	}
 .b-breadcrumbs{
-	padding-top: 30px;
-	margin-bottom: -20px;
+	margin-top: 0px;
+	margin-bottom: 20px;
 	font-size: 14px;
 }
 	.b-breadcrumbs li{
@@ -1493,6 +1501,9 @@ input:-moz-placeholder {
 		.b-breadcrumbs li span{
 
 		}
+.main-h1{
+	display: none;
+}
 .b-popup{
 	padding: 35px;
 	overflow: visible;
@@ -1501,6 +1512,7 @@ input:-moz-placeholder {
 	width: 500px;
 }
 	.b-popup h3{
+		color: #687734;
 		margin-bottom: 16px;
 	}
 	.b-popup p{
@@ -1520,8 +1532,65 @@ input:-moz-placeholder {
 		.b-btn-green.disabled:hover{
 			background-color: #687734;
 		}
-
-
+.b-add-cart-popup{
+	width: 600px;
+}
+	.b-good-popup{
+		width: 100%;
+		padding-top: 10px;
+		margin-bottom: -10px;
+	}
+		.b-good-popup .b-img{
+			width: 20%;
+			height: 80px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.b-good-popup h4{
+			width: 73%;
+			font-family: "RobotoSlab-Regular";
+			color: #555;
+			margin-left: 3%;
+			display: inline-block;
+			vertical-align: middle;
+			margin-bottom: 7px;
+		}
+.b-news{
+	margin-bottom: -30px;
+}
+	.b-news-item{
+		width: calc(100%/3 - 16px);
+		display: inline-block;
+		margin-right: 20px;
+		vertical-align: top;
+		margin-bottom: 30px;
+	}
+		.b-news-item:nth-child(3n){
+			margin-right: 0px;
+		}
+		.b-news-item img{
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.b-news-item h3{
+			font-family: "RobotoSlab-Bold";
+			font-size: 20px;
+			line-height: 26px;
+			margin-bottom: 10px;
+		}
+			.b-news-item:hover h3{
+				text-decoration: underline;
+			}
+		.b-news-date{
+			font-size: 14px;
+			color: #999;
+			margin-bottom: 10px;
+		}
+		.b-news-item p{
+			font-size: 16px;
+			line-height: 24px;
+			color: #555;
+		}
 
 
 
@@ -1563,7 +1632,7 @@ input:-moz-placeholder {
 		background-image: url("../i/header-hd.jpg");
 	}
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1270px){
 	body {
 		min-width: 600px;
 	}
@@ -1632,9 +1701,6 @@ input:-moz-placeholder {
 				.b-img {
 				width: 35%;
 				}
-.main-h1{
-	display: none;
-}
 	.b-content {
 
 	}
@@ -1812,7 +1878,7 @@ input:-moz-placeholder {
 
 	}
 			.b-content .b-block {
-			width: calc(100% - 79px);
+			/*width: calc(100% - 79px);*/
 			}
 				.b-popular {
 				}
@@ -1900,6 +1966,33 @@ input:-moz-placeholder {
 	.b-category .b-text li:nth-child(3n) {
 		margin-right: 0;
 	}	
+.b-news{
+
+}
+	.b-news-item{
+		width: calc(100%/2 - 12px);
+	}
+		.b-news-item:nth-child(3n){
+			margin-right: 20px;
+		}
+		.b-news-item:nth-child(2n){
+			margin-right: 0px;
+		}
+		.b-news-item img{
+			
+		}
+		.b-news-item h3{
+			
+		}
+			.b-news-item:hover h3{
+				
+			}
+		.b-news-date{
+			
+		}
+		.b-news-item p{
+			
+		}
 }
 @media screen and (max-width: 968px) {
 	.b-product-slider .b-img {
