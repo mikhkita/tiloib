@@ -1244,8 +1244,10 @@ input:-moz-placeholder {
 					.b-category-img {
 						background-repeat: no-repeat;
 						background-position: 50% 50%;
-						width: 100%;
-						height: 140px;
+						background-size: contain;
+						width: 50%;
+						height: 94px;
+						margin: 0 auto;
 					}
 					.b-category-item-valign {
 						display: table;
