@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 768px)" href="css/layout-mobile.css">
+	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 800px)" href="css/layout-mobile.css">
 	<meta name="viewport" content="width=1000">
 
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -95,14 +95,15 @@
 						</ul>
 					</div>
 					<div class="b-search-block">
-						<div class="b-search-block-top clearfix">
+						<div class="b-search-block-top mobile-only clearfix">
 							<a href="index.html" class="b-logo mobile-only"></a>
-							<span>Ваш город:</span>
-							<a href="#" class="icon-map-marker">Томск</a>
-							<a href="#" class="icon-menu toggle-button mobile-only"></a>							
+							<a href="#" class="icon-menu toggle-button mobile-only"></a>
+							<a href="#" class="icon-search mobile-only"></a>							
 						</div>
 						<div class="b-search-block-bottom clearfix">
-							<form action="">
+							<span>Ваш город:</span>
+							<a href="#" class="icon-map-marker">Томск</a>						
+							<form action="" class="not-mobile">
 								<div class="b-search-field">
 									<a href="#" class="icon-search"></a>
 									<input type="text"  placeholder="Поиск по сайту">

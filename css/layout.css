@@ -334,7 +334,7 @@ input:-moz-placeholder {
 					position: relative;
 					vertical-align: middle;
 				}			
-				.b-search-block .b-search-block-top>span {
+				.b-search-block .b-search-block-bottom>span {
 					font-family: "RobotoSlab-Bold";
 					color: #A0762C;
 					font-size: 16px;
@@ -1398,6 +1398,7 @@ input:-moz-placeholder {
   top: 7px;
   left: 7px;
   font-size: 21px;
+  color: #ffffff;
 }
 .icon-rub {
 	position: relative;
@@ -2010,6 +2011,16 @@ input:-moz-placeholder {
 		float: none;
 		/* width: 100%; */
 	}
+	.b-product-slider {
+		height: initial;
+	}
+	.b-slider-item {
+		height: initial;
+	}
+	.b-slider-item .b-block {
+		height: initial;
+		padding-bottom: 55px;
+	}
 }
 @media screen and (max-width: 900px) {
 					.b-product-card {
@@ -2030,7 +2041,7 @@ input:-moz-placeholder {
 					.b-header .b-menu li:first-child {
 						margin-left: 0px;
 					}	
-					.b-search-block .b-search-block-top>span {
+					.b-search-block .b-search-block-bottom>span {
 						display: none;
 					}		
 }

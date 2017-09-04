@@ -120,12 +120,12 @@ input:-moz-placeholder {
 	cursor: pointer;
 }
 	.b-btn-green:hover {
-		background-color: #a0762c;
+		/* background-color: #a0762c; */
 	}
 .slick-dots {
 	position: absolute;
 	display: inline-block !important;
-	bottom: 25px;
+	bottom: 15px;
 	left: calc((100% - 200px)/2);
 	width: 200px;
 	text-align: center;
@@ -136,6 +136,9 @@ input:-moz-placeholder {
 	}
 .mobile-only {
 	display: inline-block !important;
+}
+.not-mobile {
+	display: none !important;
 }
 body {
   width: 100%;
@@ -258,7 +261,7 @@ body {
 		.b-header .b-block {
 			box-sizing: border-box;
 			padding-top: 38px;
-			padding-bottom: 52px;
+			/* padding-bottom: 52px; */
 		}
 			.b-header .b-menu {
 				width: 100%;
@@ -288,6 +291,29 @@ body {
 				text-align: left;
 				/* margin-bottom: 51px; */
 			}
+				.b-search-block .b-search-block-bottom>span {
+					display: inline-block;
+					vertical-align: middle;
+					line-height: 50px;
+					margin-right: 22px;
+				}
+				.b-search-block-top .icon-search {
+					vertical-align: middle;
+					width: 35px;
+					height: 35px;
+					background-color: #687734;
+					border: 2px solid;
+					border-radius: 50%;
+					position: relative;
+					float: right;
+					margin-right: 20px;
+				}
+				.b-search-block-top .icon-search:before {
+					color: #ffffff;
+					position: absolute;
+					top: 8px;
+					left: 8px;
+				}
 				.b-search-block form{
 					display: inline-block;
 					position: relative;
@@ -318,6 +344,7 @@ body {
 					border-radius: 50%;
 					border: 2px solid;
 					float: right;
+					background-color: #687734;
 				}
 				.b-search-block .icon-map-marker {
 					color: #4A4A4A;
@@ -413,7 +440,7 @@ body {
 			.b-product-slider {
 				/* margin-top: 53px; */
 				width: 100%;
-				height: 359px;
+				height: initial;
 				background-color: #F7F3E9;
 				border-radius: 15px;
 				overflow: hidden;
@@ -423,7 +450,7 @@ body {
 			}
 				.b-slider-item {
 					display: block;
-					height: 359px;
+					height: initial;
 				}
 					.b-slider-item h2 {
 						font-size: 26px;
@@ -444,7 +471,8 @@ body {
 					.b-slider-item .b-block {
 						width: calc(100% - 10%);
 						padding: 35px 0;
-						height: 359px;
+						padding-bottom: 65px;
+						height: initial;
 					}
 						.b-slider-text {
 							/* display: inline-block; */
@@ -558,7 +586,7 @@ body {
 							line-height: 24px;
 							color: #687734;
 							display: inline-block;
-							width: calc(100% - 98px);
+							width: calc(100% - 116px);
 							vertical-align: middle;
 						}
 						.b-product-card .icon-rub {
@@ -575,7 +603,7 @@ body {
 						.b-product-card .b-btn-green {
 							display: inline-block;
 							vertical-align: middle;
-							padding: 4px 11px 2px 11px;
+							padding: 10px 20px 8px 20px;
 						}
 	.b-footer {
 		background-image: url('../i/footer.jpg');
@@ -586,7 +614,7 @@ body {
 		height: 360px;		
 	}
 			.b-footer .b-block {
-				padding: 40px 40px 0;
+				padding: 40px 0;
 				text-align: center;
 			}
 				.b-footer-menu-cont {
@@ -602,9 +630,7 @@ body {
 					-moz-box-shadow: 0px 7px 50px rgba(0,0,0,0.2);
 					box-shadow: 0px 7px 50px rgba(0,0,0,0.2);
 				}
-					.b-logo-contacts {
-
-					}
+					.b-logo-contacts {margin-right: 34px;}
 						.b-footer .b-logo {
 							background-image: url('../i/logo-green.png');
 							margin-bottom: 22px;
@@ -621,12 +647,23 @@ body {
 						}						
 					.b-footer-menu {
 						display: table;
-						width: calc(93% - 145px);
+						width: 50%;
+						max-width: 200px;
+						float: none !important;
 					}
 						.b-footer-col {
 							display: table-cell;
-							padding-left: 42px;
+							padding-left: 0;
 							width: calc(100%/3);
+						}
+						.b-footer-col:nth-child(1) {
+
+						}
+						.b-footer-col:nth-child(2) {display: table;/* width: 100px; */margin-right: 34px;}
+						.b-footer-col:nth-child(3) {
+							min-width: 160px;
+							/* width: 50%; */
+							/* max-width: 200px; */
 						}
 							.b-footer-col h3 {
 								font-size: 16px;
@@ -1398,6 +1435,11 @@ body {
 		}
 		.b-btn-green.disabled:hover{
 		}
+@media screen and (max-width: 640px) {
+	.b-footer-col:nth-child(2) {
+		display: none;
+	}
+}
 @media screen and (max-width: 580px) {
 	.b-product-card {
 		width: 100%;
@@ -1409,16 +1451,16 @@ body {
 }
 @media screen and (max-width: 490px) {
 	.b-footer {
-		background-image: none;
-		height: initial;
-		padding-bottom: 24px;
+		/* background-image: none; */
+		/* height: initial; */
+		/* padding-bottom: 24px; */
 	}
-	.b-footer .b-block {padding: 0;width: 100%;}
+	.b-footer .b-block {/* padding: 0; *//* width: 100%; */}
 	.b-footer-menu-cont {
 		height: initial;
-		box-shadow: none;
-		border-radius: 0;
-		margin-bottom: 24px;
+		/* box-shadow: none; */
+		/* border-radius: 0; */
+		/* margin-bottom: 24px; */
 	}
 	.b-logo-contacts {
 		display: inline-block;
@@ -1433,6 +1475,7 @@ body {
 		vertical-align: top;
 		min-width: 120px;
 		width: initial;
+		max-width: 200px;
 	}
 	.b-footer-col {
 		display: block;
@@ -1442,7 +1485,6 @@ body {
 		padding-left: 0;
 	}
 	.b-copiright {
-		/* margin-bottom: 24px; */
 		width: 90%;
 		margin: 0 auto;
 	}
