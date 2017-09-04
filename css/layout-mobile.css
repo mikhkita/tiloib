@@ -97,6 +97,7 @@ input:-moz-placeholder {
 }
 h3{
 	font-size: 24px;
+	line-height: 30px;
 }
 .b-icon{
 	position: relative;
@@ -1240,6 +1241,13 @@ body {
 							padding: 0;
 							text-align: center;
 						}
+					.b-good-popup .b-img {
+    width: 60%;
+    height: 166px;
+    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 .b-contacts-page {
 
@@ -1435,7 +1443,7 @@ body {
 	width: calc(100% - 40px);
 }
 .b-city-popup{
-	width: 500px;
+	width: calc(100% - 40px);
 }
 	.b-popup h3{
 		margin-bottom: 16px;
