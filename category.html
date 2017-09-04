@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/KitAnimate.css" type="text/css">
 	<link rel="stylesheet" href="css/layout.css" type="text/css">
 	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-
+	<link rel="stylesheet" media="screen and (min-width: 240px) and (max-width: 800px)" href="css/layout-mobile.css">
 	<meta name="viewport" content="width=1000">
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
@@ -29,190 +29,207 @@
 	<script type="text/javascript" src="js/KitProgress.js"></script>
 	<script type="text/javascript" src="js/KitAnimate.js"></script>
 	<script type="text/javascript" src="js/device.js"></script>
+	<script type="text/javascript" src="js/slideout.js"></script>	
 	<script type="text/javascript" src="js/KitSend.js"></script>
 	<script type="text/javascript" src="js/slick.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </head>
 <body>
-	<ul class="ps-lines">
-		<li class="v" style="margin-left:-501px"></li>
-		<li class="v" style="margin-left:500px"></li>
-		<li class="v" ></li>
-	</ul>
-	<div class="b-left-block left">
-		<div class="b-block clearfix">
-			<a href="index.html" class="b-logo"></a>
-		</div>
-		<div class="b-menu">
-			<ul>
-				<li><a href="#">Зимний сад</a></li>
-				<li><a href="#">Здоровое питание</a></li>
-				<li><a href="#">Косметика</a></li>
-				<li><a href="#">Космецевтика</a></li>
-				<li><a href="#">Сборы</a></li>
-				<li><a href="#">Растения</a></li>
-			</ul>
-		</div>
-		<div class="b-block">
-			<div class="b-contacts">
-				<div class="b-contacts-market">
-					<h3>Интернет-магазин</h3>
-					<p><a href="tel:+79016114774">+7 (901) 611-47-74</a></p>					
-				</div>
-				<div class="b-contacts-garden">
-					<h3>Зимний сад</h3>
-					<p>
-						<a href="tel:+79016114774">+7 (901) 611-47-74</a>
-					</p>
-					<p>
-						<a href="tel:+73853729739">+7 (38537) 297-39</a>
-					</p>					
-				</div>
-			</div>			
-		</div>
-	</div>
-	<div class="b-body-block right">
-		<div class="b-header">
+	<nav id="menu">
+		<div class="b-left-block left">
 			<div class="b-block clearfix">
-				<div class="b-menu">
-					<ul>
-						<li><a href="#">О магазине</a></li>
-						<li><a href="#">Как купить</a></li>
-						<li><a href="#">Прайс лист</a></li>
-						<li><a href="#">Партнеры</a></li>
-						<li><a href="#">Новости</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
-					</ul>
-				</div>
-				<div class="b-search-block">
-					<span>Ваш город:</span>
-					<a href="#" class="icon-map-marker">Томск</a>
-					<form action="">
-						<div class="b-search-field">
-							<a href="#" class="icon-search"></a>
-							<input type="text"  placeholder="Поиск по сайту">
-						</div>
-						<input type="submit" class="b-btn-search icon-search">
-					</form>
-					<a href="cart.html" class="b-btn-green b-btn-cart icon-cart">1 800<span class="icon-rub"></span></a>
-				</div>
+				<a href="index.html" class="b-logo"></a>
+			</div>
+			<div class="b-menu">
+				<ul>
+					<li><a href="#">Зимний сад</a></li>
+					<li><a href="#">Здоровое питание</a></li>
+					<li><a href="#">Косметика</a></li>
+					<li><a href="#">Космецевтика</a></li>
+					<li><a href="#">Сборы</a></li>
+					<li><a href="#">Растения</a></li>
+				</ul>
+			</div>
+			<div class="b-menu mobile-only">
+				<ul>
+					<li><a href="#">О магазине</a></li>
+					<li><a href="#">Как купить</a></li>
+					<li><a href="#">Прайс лист</a></li>
+					<li><a href="#">Партнеры</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="contacts.html">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="b-block">
+				<div class="b-contacts">
+					<div class="b-contacts-market">
+						<h3>Интернет-магазин</h3>
+						<p><a href="tel:+79016114774">+7 (901) 611-47-74</a></p>					
+					</div>
+					<div class="b-contacts-garden">
+						<h3>Зимний сад</h3>
+						<p>
+							<a href="tel:+79016114774">+7 (901) 611-47-74</a>
+						</p>
+						<p>
+							<a href="tel:+73853729739">+7 (38537) 297-39</a>
+						</p>					
+					</div>
+				</div>			
 			</div>
 		</div>
-		<div class="b-content b-inner">
-			<div class="b-block">
-				<h1>Здоровое питание</h1>
-				<div class="b-category">
-					<div class="b-category-cont b-text">
+	</nav>
+	<main id="panel">
+		<div class="b-body-block right">
+			<div class="b-header">
+				<div class="b-block clearfix">
+					<div class="b-menu">
 						<ul>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/heart.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для сердца</h3></div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/stomach.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для желудка и кишечника</h3></div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/liver.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для печени</h3></div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/eye.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для зрения</h3></div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/hair.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для волос</h3></div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/brain.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для мозга</h3></div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/lungs.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для бронхов и лёгких</h3></div>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="b-category-item">
-									<div class="b-category-img" style="background-image: url('./i/hammer.svg');"></div>
-									<div class="b-category-item-valign"><h3>Для нервной системы</h3></div>
-								</a>
-							</li>
+							<li><a href="#">О магазине</a></li>
+							<li><a href="#">Как купить</a></li>
+							<li><a href="#">Прайс лист</a></li>
+							<li><a href="#">Партнеры</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="contacts.html">Контакты</a></li>
 						</ul>
 					</div>
-				</div>						
-			</div>
-		</div>
-		<div class="b-footer">
-			<div class="b-block">
-				<div class="b-footer-menu-cont clearfix">
-					<div class="b-logo-contacts left">
-						<a href="index.html" class="b-logo"></a>
-						<div class="b-contacts">
-							<div class="b-contacts-market">
-								<h3>Интернет-магазин</h3>
-								<p><a href="tel:+79016114774">+7 (901) 611-47-74</a></p>					
-							</div>
-							<div class="b-contacts-garden">
-								<h3>Зимний сад</h3>
-								<p>
-									<a href="tel:+79016114774">+7 (901) 611-47-74</a>
-								</p>
-								<p>
-									<a href="tel:+73853729739">+7 (38537) 297-39</a>
-								</p>					
-							</div>
+					<div class="b-search-block">
+						<div class="b-search-block-top mobile-only clearfix">
+							<a href="index.html" class="b-logo mobile-only"></a>
+							<a href="#" class="icon-menu toggle-button mobile-only"></a>
+							<a href="#" class="icon-search mobile-only"></a>							
+						</div>
+						<div class="b-search-block-bottom clearfix">
+							<span>Ваш город:</span>
+							<a href="#" class="icon-map-marker">Томск</a>						
+							<form action="" class="not-mobile">
+								<div class="b-search-field">
+									<a href="#" class="icon-search"></a>
+									<input type="text"  placeholder="Поиск по сайту">
+								</div>
+								<input type="submit" class="b-btn-search icon-search">
+							</form>
+							<a href="cart.html" class="b-btn-green b-btn-cart icon-cart"><span class="b-cart-num">0</span><span class="icon-rub"></span></a>
 						</div>
 					</div>
-					<div class="b-footer-menu right">
-						<div class="b-footer-col">
-							<h3>Каталог товаров</h3>
+				</div>
+			</div>
+			<div class="b-content b-inner">
+				<div class="b-block">
+					<h1>Здоровое питание</h1>
+					<div class="b-category">
+						<div class="b-category-cont b-text">
 							<ul>
-								<li><a href="#">Здоровое питание</a></li>
-								<li><a href="#">Косметика</a></li>
-								<li><a href="#">Космецевтика</a></li>
-								<li><a href="#">Сборы</a></li>
-								<li><a href="#">Растения</a></li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/heart.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для сердца</h3></div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/stomach.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для желудка и кишечника</h3></div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/liver.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для печени</h3></div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/eye.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для зрения</h3></div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/hair.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для волос</h3></div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/brain.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для мозга</h3></div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/lungs.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для бронхов и лёгких</h3></div>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="b-category-item">
+										<div class="b-category-img" style="background-image: url('./i/hammer.svg');"></div>
+										<div class="b-category-item-valign"><h3>Для нервной системы</h3></div>
+									</a>
+								</li>
 							</ul>
-						</div>
-						<div class="b-footer-col">
-							<h3>Информация</h3>
-							<ul>
-								<li><a href="#">О магазине</a></li>
-								<li><a href="#">Как купить?</a></li>
-								<li><a href="#">Гарантия</a></li>
-								<li><a href="#">Доставка</a></li>
-								<li><a href="contacts.html">Контакты</a></li>
-							</ul>
-						</div>
-						<div class="b-footer-col">
-							<h3>Рассылка</h3>
-							<form action="">
-								<input type="text" placeholder="Введите ваш E-mail">
-								<button href="" type="submit" class="b-btn-green">Подписаться</button>
-							 </form>
 						</div>
 					</div>						
 				</div>
-				<p class="b-copiright">© «БИОЛИТ», 2017 САЙТ РАЗРАБОТАН В СТУДИИ <a href="http://redder.pro">REDDER.PRO</a></p>	
+			</div>
+			<div class="b-footer">
+				<div class="b-block">
+					<div class="b-footer-menu-cont clearfix">
+						<div class="b-logo-contacts left">
+							<a href="index.html" class="b-logo"></a>
+							<div class="b-contacts">
+								<div class="b-contacts-market">
+									<h3>Интернет-магазин</h3>
+									<p><a href="tel:+79016114774">+7 (901) 611-47-74</a></p>					
+								</div>
+								<div class="b-contacts-garden">
+									<h3>Зимний сад</h3>
+									<p>
+										<a href="tel:+79016114774">+7 (901) 611-47-74</a>
+									</p>
+									<p>
+										<a href="tel:+73853729739">+7 (38537) 297-39</a>
+									</p>					
+								</div>
+							</div>
+						</div>
+						<div class="b-footer-menu right">
+							<div class="b-footer-col">
+								<h3>Каталог товаров</h3>
+								<ul>
+									<li><a href="#">Здоровое питание</a></li>
+									<li><a href="#">Косметика</a></li>
+									<li><a href="#">Космецевтика</a></li>
+									<li><a href="#">Сборы</a></li>
+									<li><a href="#">Растения</a></li>
+								</ul>
+							</div>
+							<div class="b-footer-col">
+								<h3>Информация</h3>
+								<ul>
+									<li><a href="#">О магазине</a></li>
+									<li><a href="#">Как купить?</a></li>
+									<li><a href="#">Гарантия</a></li>
+									<li><a href="#">Доставка</a></li>
+									<li><a href="contacts.html">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="b-footer-col">
+								<h3>Рассылка</h3>
+								<form action="">
+									<input type="text" placeholder="Введите ваш E-mail">
+									<button href="" type="submit" class="b-btn-green">Подписаться</button>
+								 </form>
+							</div>
+						</div>						
+					</div>
+					<p class="b-copiright">© «БИОЛИТ», 2017 САЙТ РАЗРАБОТАН В СТУДИИ <a href="http://redder.pro">REDDER.PRO</a></p>	
+				</div>
 			</div>
 		</div>
-	</div>
+	</main>
 	<div style="display:none;">
 		<a href="#b-popup-error" class="b-error-link fancy" style="display:none;"></a>
 		<div class="b-popup" id="b-popup-1">
