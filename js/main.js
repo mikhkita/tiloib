@@ -28,7 +28,7 @@ $(document).ready(function(){
             myHeight = document.body.clientHeight;
         }
         mydevice(); 
-        slideOutClosePc ();
+        slideOutClosePc();
 
     }
     $(window).resize(resize);
@@ -62,11 +62,21 @@ $(document).ready(function(){
     
     // Добавление в корзину
 	$("body").on("click",".b-btn-to-cart",function(){
-        var url = $(this).attr("href"); 
+        var url = $(this).attr("href"),
+            img = null,
+            name = null;
 
         if( $("input[name=quantity]").length ){
             url = url + "&quantity=" + $("input[name=quantity]").val();
         }
+
+        if( $(this).parent().hasClass("b-product-card") ){
+            name = $(this).parent().find("h3").text();
+            img = $(this).parent().find(".b-img").attr("style");
+        }else{
+
+        }
+
         progress.start(1.5);
         $.ajax({
             type: "GET",
@@ -82,6 +92,11 @@ $(document).ready(function(){
                         $(".b-btn-cart").attr("onclick", "return false;");
                     }
                     $(".b-cart-num").text(json.count);
+
+                    $(".b-good-popup h4").text(name);
+                    $(".b-good-popup .b-img").attr("style", img);
+
+                    $(".b-add-cart-link").click();
                 }else{
                     alert("Ошибка добавления в корзину");
                 }
@@ -124,7 +139,7 @@ $(document).ready(function(){
 
         return false;
     });
-    function slideOutClosePc () {
+    function slideOutClosePc() {
         if (mobile == false) {
             slideout.close();
         }
@@ -320,9 +335,43 @@ $(document).ready(function(){
         });
     }
 
+
+    var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 200,
+        'tolerance': 70
+        });
+    // Toggle button
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+      slideout.toggle(); 
+    });
+
+    function close(eve) {
+      eve.preventDefault();
+      slideout.close();
+      slideout.disableTouch();
+    }
+
+    slideout
+      .on('beforeopen', function() {
+        this.panel.classList.add('panel-open');
+        this.menu.classList.add('menu-active');
+        slideout.enableTouch();
+      })
+      .on('open', function() {
+        this.panel.addEventListener('click', close);
+      })
+      .on('beforeclose', function() {
+        this.panel.classList.remove('panel-open');
+        this.menu.classList.remove('menu-active');
+        slideout.disableTouch();
+        this.panel.removeEventListener('click', close);
+      });
 });
 
-var lastWait = [];
+if( typeof BX != "undefined" ){
+    var lastWait = [];
     /* non-xhr loadings */
     BX.showWait = function (node, msg)
     {
@@ -398,3 +447,8 @@ var lastWait = [];
             this.bxmsg.style.left = (arContainerPos.right - this.bxmsg.offsetWidth - 5) + 'px';
         }
     }
+}
+
+
+
+
