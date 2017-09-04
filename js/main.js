@@ -218,9 +218,9 @@ $(document).ready(function(){
     mapMargins ();
     if ($('.b-map-cont').length) {
         var zoomm = (myWidth<430)?(11):(Number($(".nav-map-city-active").attr("data-zoom"))),
-            panto_lenin = new google.maps.LatLng(56.47999+marginV,84.9468+marginG),
-            panto_frunz = new google.maps.LatLng(56.4756052+marginV,84.9801+marginG),
-            panto_glav = new google.maps.LatLng(56.4748468+marginV,85.0465+marginG),
+            panto_lenin = new google.maps.LatLng(56.47999+marginV,84.947+marginG),
+            panto_frunz = new google.maps.LatLng(56.4755+marginV,84.9804+marginG),
+            panto_glav = new google.maps.LatLng(56.47492+marginV,85.0466+marginG),
             panto_nahim = new google.maps.LatLng(56.45486+marginV,84.971+marginG),
             panto_mira = new google.maps.LatLng(56.516855+marginV,84.974+marginG),
             current_city_coord = $(".nav-map-city-active").attr("data-point").split(","),
