@@ -517,7 +517,7 @@ body {
 				}
 	.b-content {background: #ffffff;}
 			.b-content .b-block {
-				padding-bottom: 64px;
+				padding-bottom: 45px;
 			}
 				.b-popular {
 					padding-top: 20px;
@@ -1254,19 +1254,22 @@ body {
 			line-height: 36px;
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
-			border-radius: 15px 15px 0 0;
+			border-radius: 10px;
 			padding: 0 24px;
 			cursor: pointer;
+			margin-bottom: 10px;
+			margin-right: 7px;
 		}	
 		.nav-map-city-active {
-			background-color: #f7f3e9 !important;
+			background-color: #687734 !important;
+			color: #FFF;
 		}
 	.b-adresses {
 		margin-bottom: 24px;
 		background-color: #f7f3e9;
-		border-radius: 0 15px 15px;
+		border-radius: 10px;
 		box-sizing: border-box;
-		padding: 15px 24px;
+		padding: 15px 24px 2px;
 	}
 		.b-adresses .tomsk {
 
@@ -1291,11 +1294,12 @@ body {
 			margin-right: 24px;
 		}
 			.b-adresses li {
-				margin-bottom: 12px;
+				margin-bottom: 20px;
 			}
 				.b-adresses a {
 					border-bottom: 1px dashed #979797;
-					line-height: 32px;
+					line-height: 24px;
+					margin-bottom: 10px;
 				}
 				.b-adresses a:hover {
 					border-bottom: none;
