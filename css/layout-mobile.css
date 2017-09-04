@@ -95,6 +95,9 @@ input::-webkit-input-placeholder {
 input:-moz-placeholder {
 	color: #434343;
 }
+h3{
+	font-size: 24px;
+}
 .b-icon{
 	position: relative;
 }
@@ -267,7 +270,7 @@ body {
 	}
 		.b-header .b-block {
 			box-sizing: border-box;
-			padding-top: 38px;
+			padding-top: 25px;
 			/* padding-bottom: 52px; */
 		}
 			.b-header .b-menu {
@@ -296,7 +299,7 @@ body {
 			}	
 			.b-search-block {
 				text-align: left;
-				/* margin-bottom: 51px; */
+				margin-bottom: 27px;
 			}
 				.b-search-block .b-search-block-bottom>span {
 					/* display: inline-block; */
@@ -328,9 +331,10 @@ body {
 					width: calc(100% - 180px);
 					text-align: left;
 				}	
-				.b-search-block-top	{width: 100%;margin-bottom: 24px;}	
+				.b-search-block-top	{width: 100%;margin-bottom: 43px;}	
 				.b-search-block-bottom	{
 					width: 100%;
+					text-align: right;
 				}				
 				.b-search-block .b-search-block-top>span {
 					color: #A0762C;
@@ -449,6 +453,7 @@ body {
 			}
 			.b-product-slider {
 				/* margin-top: 53px; */
+				margin-bottom: 35px;
 				width: 100%;
 				height: initial;
 				background-color: #F7F3E9;
@@ -463,18 +468,18 @@ body {
 					height: initial;
 				}
 					.b-slider-item h2 {
-						font-size: 26px;
-						line-height: 36px;
+						font-size: 24px;
+						line-height: 30px;
 						color: #A0762C;
 						margin-bottom: 16px;
 						max-height: 65px;
 						/* overflow: hidden; */
 					}	
 					.b-slider-item p {
-						font-size: 18px;
+						font-size: 16px;
 						line-height: 24px;
 						color: #687734;
-						margin-bottom: 30px;
+						margin-bottom: 25px;
 						max-height: 96px;
 						overflow: hidden;
 					}											
@@ -512,7 +517,7 @@ body {
 				}
 	.b-content {background: #ffffff;}
 			.b-content .b-block {
-				padding-bottom: 64px;
+				padding-bottom: 45px;
 			}
 				.b-popular {
 					padding-top: 20px;
@@ -527,7 +532,7 @@ body {
 						border: 2px solid #F2EBDA;
 						border-radius: 15px;
 						box-sizing: border-box;
-						height: 344px;
+						height: 421px;
 						padding: 24px;
 						display: inline-block;
 						margin-bottom: 25px;
@@ -569,22 +574,14 @@ body {
 							background-size: contain;
 							background-position: 50% 50%;
 							width: 100%;
-							height: 178px;
+							height: 230px;
 							margin-bottom: 14px;
 						}
 						.b-product-card h3 {
-							font-size: 14px;
-							line-height: 20px;
+							font-size: 16px;
+							line-height: 24px;
 							color: #4A4A4A;
-							height: 60px;
-							overflow: hidden;
-							margin-bottom: 7px;
-						}
-						.b-product-card h3 {
-							font-size: 14px;
-							line-height: 20px;
-							color: #4A4A4A;
-							height: 60px;
+							height: 76px;
 							overflow: hidden;
 							margin-bottom: 7px;
 						}
@@ -616,12 +613,12 @@ body {
 							padding: 10px 20px 8px 20px;
 						}
 	.b-footer {
-		background-image: url('../i/footer.jpg');
+		background-image: url('../i/mobile-footer.jpg');
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: 100% auto;
 		background-position: 0 0;
 		width: 100%;
-		height: 360px;		
+		height: auto;
 	}
 			.b-footer .b-block {
 				padding: 40px 0;
@@ -1257,19 +1254,22 @@ body {
 			line-height: 36px;
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
-			border-radius: 15px 15px 0 0;
+			border-radius: 10px;
 			padding: 0 24px;
 			cursor: pointer;
+			margin-bottom: 10px;
+			margin-right: 7px;
 		}	
 		.nav-map-city-active {
-			background-color: #f7f3e9 !important;
+			background-color: #687734 !important;
+			color: #FFF;
 		}
 	.b-adresses {
 		margin-bottom: 24px;
 		background-color: #f7f3e9;
-		border-radius: 0 15px 15px;
+		border-radius: 10px;
 		box-sizing: border-box;
-		padding: 15px 24px;
+		padding: 15px 24px 2px;
 	}
 		.b-adresses .tomsk {
 
@@ -1294,11 +1294,12 @@ body {
 			margin-right: 24px;
 		}
 			.b-adresses li {
-				margin-bottom: 12px;
+				margin-bottom: 20px;
 			}
 				.b-adresses a {
 					border-bottom: 1px dashed #979797;
-					line-height: 32px;
+					line-height: 24px;
+					margin-bottom: 10px;
 				}
 				.b-adresses a:hover {
 					border-bottom: none;
@@ -1361,21 +1362,30 @@ body {
 .modern-page-navigation{
 	margin-top: 25px;
 	margin-bottom: -15px;
+	font-size: 14px;
 }
 	.modern-page-title{
 		margin-right: 10px;
+		display: none;
 	}
 	.modern-page-navigation a,
 	.modern-page-navigation span{
 		border: none !important;
 	}
+	.modern-page-dots{
+		padding: 0px !important;
+	}
+	.modern-page-all{
+		display: none;
+	}
 	.modern-page-navigation .modern-page{
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		font-size: 18px;
+		height: 40px;
 		display: inline-block;
 		padding: 0px !important;
 		text-align: center;
-		line-height: 30px;
+		line-height: 40px;
 		border-radius: 100px;
 		border: none !important;
 	}
@@ -1421,7 +1431,8 @@ body {
 
 		}
 .b-popup{
-	padding: 35px;
+	padding: 25px;
+	width: calc(100% - 40px);
 }
 .b-city-popup{
 	width: 500px;
@@ -1475,10 +1486,32 @@ body {
 @media screen and (max-width: 580px) {
 	.b-product-card {
 		width: 100%;
+		height: auto;
 	}
 	.b-news-item{
 		width: 100%;
 		margin-right: 0px;
+	}
+	.b-product-card span{
+		font-size: 30px;
+		width: calc(100% - 148px);
+	}
+	.b-product-card .icon-rub{
+		width: 20px;
+    	height: 21px;
+	}
+	.b-product-card .icon-rub:before{
+		font-size: 22px;
+	}
+	.b-product-card .b-btn-green{
+		font-size: 16px;
+		padding: 14px 24px 12px 24px;
+	}
+	.b-product-card h3 {
+	    font-size: 16px;
+	    line-height: 24px;
+	    margin-bottom: 15px;
+	    height: auto;
 	}
 	.b-map-cont {
 		height: 600px;	
