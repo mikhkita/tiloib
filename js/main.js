@@ -30,6 +30,7 @@ $(document).ready(function(){
         }
         mydevice(); 
         slideoutdefine();
+        mapMargins ();
         //slideOutClosePc();
 
     }
@@ -209,17 +210,23 @@ $(document).ready(function(){
        });
        
     }
+    var marginG=0,marginV=0;
+    function mapMargins () {
+        marginG = (myWidth>580)?(0.005):(0.0033);
+        marginV = (myWidth<580)?(-0.001):(0);
+    }
+    mapMargins ();
     if ($('.b-map-cont').length) {
-        var zoomm = Number($(".nav-map-city-active").attr("data-zoom"));
-        var panto_lenin = new google.maps.LatLng(56.47999,84.9518);
-        var panto_frunz = new google.maps.LatLng(56.4756052,84.9851);
-        var panto_glav = new google.maps.LatLng(56.4748468,85.0515);
-        var panto_nahim = new google.maps.LatLng(56.45486,84.976);
-        var panto_mira = new google.maps.LatLng(56.516855,84.979);
-        var current_city_coord = $(".nav-map-city-active").attr("data-point").split(",");
-        var mapg = Number(current_city_coord[0]);
-        var mapv = Number(current_city_coord[1]);
-        var latlng = new google.maps.LatLng(mapg,mapv);
+        var zoomm = (myWidth<430)?(11):(Number($(".nav-map-city-active").attr("data-zoom"))),
+            panto_lenin = new google.maps.LatLng(56.47999+marginV,84.9468+marginG),
+            panto_frunz = new google.maps.LatLng(56.4756052+marginV,84.9801+marginG),
+            panto_glav = new google.maps.LatLng(56.4748468+marginV,85.0465+marginG),
+            panto_nahim = new google.maps.LatLng(56.45486+marginV,84.971+marginG),
+            panto_mira = new google.maps.LatLng(56.516855+marginV,84.974+marginG),
+            current_city_coord = $(".nav-map-city-active").attr("data-point").split(","),
+            mapg = Number(current_city_coord[0]),
+            mapv = Number(current_city_coord[1]),
+            latlng = new google.maps.LatLng(mapg,mapv);
         var settings = {
             zoom: zoomm,
             center: latlng,
@@ -318,6 +325,7 @@ $(document).ready(function(){
             $('.b-map-adress').removeClass("show");
         }) 
         $(".nav-map-city li").click(function(){
+            $('.b-map-adress').removeClass("show");
             $(".nav-map-city li").removeClass("nav-map-city-active");
             $(this).addClass("nav-map-city-active");
             $(".b-adresses>div").removeClass("selected");

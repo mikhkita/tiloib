@@ -1293,9 +1293,10 @@ input:-moz-placeholder {
 		}
 		.b-adresses ul {
 			display: inline-block;
-			width: calc((100% - 4px)/2);
+			width: calc((100% - 52px)/2);
 			/* margin-bottom: 16px; */
 			vertical-align: top;
+			margin-right: 24px;
 		}
 			.b-adresses li {
 				margin-bottom: 12px;
