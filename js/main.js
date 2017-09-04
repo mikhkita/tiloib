@@ -1,4 +1,5 @@
-var progress = new KitProgress("#687734",3);
+var progress = new KitProgress("#687734",3),
+    slideout = null;
 $(document).ready(function(){	
     progress.endDuration = 0.3;
     function mydevice () {
@@ -140,7 +141,7 @@ $(document).ready(function(){
         return false;
     });
     function slideOutClosePc() {
-        if (mobile == false) {
+        if (mobile == false && slideout != null) {
             slideout.close();
         }
     }
@@ -336,38 +337,38 @@ $(document).ready(function(){
     }
 
 
-    var slideout = new Slideout({
+    slideout = new Slideout({
         'panel': document.getElementById('panel'),
         'menu': document.getElementById('menu'),
         'padding': 200,
         'tolerance': 70
         });
     // Toggle button
-    document.querySelector('.toggle-button').addEventListener('click', function() {
-      slideout.toggle(); 
+    $('.toggle-button').on('click', function() {
+        slideout.toggle(); 
     });
 
     function close(eve) {
-      eve.preventDefault();
-      slideout.close();
-      slideout.disableTouch();
+        eve.preventDefault();
+        slideout.close();
+        slideout.disableTouch();
     }
 
     slideout
-      .on('beforeopen', function() {
-        this.panel.classList.add('panel-open');
-        this.menu.classList.add('menu-active');
-        slideout.enableTouch();
-      })
-      .on('open', function() {
-        this.panel.addEventListener('click', close);
-      })
-      .on('beforeclose', function() {
-        this.panel.classList.remove('panel-open');
-        this.menu.classList.remove('menu-active');
-        slideout.disableTouch();
-        this.panel.removeEventListener('click', close);
-      });
+        .on('beforeopen', function() {
+          this.panel.classList.add('panel-open');
+          this.menu.classList.add('menu-active');
+          slideout.enableTouch();
+        })
+        .on('open', function() {
+          this.panel.addEventListener('click', close);
+        })
+        .on('beforeclose', function() {
+          this.panel.classList.remove('panel-open');
+          this.menu.classList.remove('menu-active');
+          slideout.disableTouch();
+          this.panel.removeEventListener('click', close);
+        });
 });
 
 if( typeof BX != "undefined" ){

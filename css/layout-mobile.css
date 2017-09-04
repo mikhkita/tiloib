@@ -1402,6 +1402,10 @@ body {
 	.b-product-card {
 		width: 100%;
 	}
+	.b-news-item{
+		width: 100%;
+		margin-right: 0px;
+	}
 }
 @media screen and (max-width: 490px) {
 	.b-footer {
@@ -1441,4 +1445,5 @@ body {
 		/* margin-bottom: 24px; */
 		width: 90%;
 		margin: 0 auto;
+	}
 }
