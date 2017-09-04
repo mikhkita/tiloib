@@ -159,22 +159,42 @@ $(document).ready(function(){
        $( "#spinner" ).spinner( "value", 1 );
        $(".step1").click(function(e){
             e.preventDefault();
-           $(".b-ordering div").removeClass("show");
-           $(".b-ordering-delivery").addClass("show");
+            $(this).removeClass("show");
+            $(".step2").addClass("show");
+            $(".b-ordering-delivery-back").addClass("show");            
+            $(".b-ordering div").removeClass("show");
+            $(".b-ordering-delivery").addClass("show");
             $(".b-ordering-process>ul>li").removeClass("current-step");
             $(".nav-step2").addClass("current-step");           
        });
        $(".step2").click(function(event){
             event.preventDefault();
-           $(".b-ordering div").removeClass("show");
-           $(".b-ordering-pay").addClass("show");
-            $(".b-ordering-process>ul>li").removeClass("current-step");
-            $(".nav-step3").addClass("current-step");           
+            if ($(".b-ordering-delivery input:checked").length) {
+                $(this).removeClass("show");
+                $(".b-ordering-delivery-back").removeClass("show");
+                $(".b-ordering div").removeClass("show");
+                $(".b-ordering-pay").addClass("show");
+                $(".b-ordering-process>ul>li").removeClass("current-step");
+                $(".nav-step3").addClass("current-step");  
+            }     
+            else {
+                $(".b-ordering-process>ul>li").removeClass("current-step");
+                $(".step1").removeClass("show");
+                $(".step2").addClass("show");
+                $(".b-ordering-delivery-back").addClass("show");                         
+                $(".b-ordering div").removeClass("show");
+                $(".b-ordering-delivery").addClass("show");                        
+                $(".nav-step2").addClass("current-step");   
+                $(".b-radio").addClass("delivery-error"); 
+            }    
        });       
        $(".b-ordering-delivery-back").click(function(ev){
             ev.preventDefault();
-           $(".b-ordering div").removeClass("show");
-           $(".b-ordering-items").addClass("show");
+            $(".step1").addClass("show");
+            $(".step2").removeClass("show");
+            $(".b-ordering-delivery-back").removeClass("show");
+            $(".b-ordering div").removeClass("show");
+            $(".b-ordering-items").addClass("show");
             $(".b-ordering-process>ul>li").removeClass("current-step");
             $(".nav-step1").addClass("current-step");           
        });  
@@ -185,22 +205,34 @@ $(document).ready(function(){
                 $(".b-ordering-process>ul>li").removeClass("current-step");
                 $(this).addClass("current-step");
                 if ($(this).hasClass("nav-step1")){
-                   $(".b-ordering div").removeClass("show");
-                   $(".b-ordering-items").addClass("show"); 
+                    $(".step1").addClass("show");
+                    $(".step2").removeClass("show");
+                    $(".b-ordering-delivery-back").removeClass("show");                    
+                    $(".b-ordering div").removeClass("show");
+                    $(".b-ordering-items").addClass("show"); 
                 }
                 else if ($(this).hasClass("nav-step2")) {
-                   $(".b-ordering div").removeClass("show");
-                   $(".b-ordering-delivery").addClass("show");
+                    $(".step1").removeClass("show");
+                    $(".step2").addClass("show");
+                    $(".b-ordering-delivery-back").addClass("show");                     
+                    $(".b-ordering div").removeClass("show");
+                    $(".b-ordering-delivery").addClass("show");
                 }
                 else if ($(this).hasClass("nav-step3")){
                     if ($(".b-ordering-delivery input:checked").length) {
-                       $(".b-ordering div").removeClass("show");
-                       $(".b-ordering-pay").addClass("show");
+                        $(".b-ordering div").removeClass("show");
+                        $(".b-ordering-pay").addClass("show");
+                        $(".step1").removeClass("show");
+                        $(".step2").removeClass("show");
+                        $(".b-ordering-delivery-back").removeClass("show");                       
                     }
                     else {
                         $(".b-ordering-process>ul>li").removeClass("current-step");
-                       $(".b-ordering div").removeClass("show");
-                       $(".b-ordering-delivery").addClass("show");                        
+                        $(".step1").removeClass("show");
+                        $(".step2").addClass("show");
+                        $(".b-ordering-delivery-back").addClass("show");                         
+                        $(".b-ordering div").removeClass("show");
+                        $(".b-ordering-delivery").addClass("show");                        
                         $(".nav-step2").addClass("current-step");   
                         $(".b-radio").addClass("delivery-error");                       
                         //error();
@@ -377,13 +409,13 @@ $(document).ready(function(){
         //}  
     }
     slideoutdefine();
-    function slideOutClosePc() {
-        if ($(".slideout-open")) {
-           if (mobile == false) {
-                slideout.close();
-            }         
-        }
-    } 
+    // function slideOutClosePc() {
+    //     if ($(".slideout-open")) {
+    //        if (mobile == false) {
+    //             slideout.close();
+    //         }         
+    //     }
+    // } 
 });
 
 if( typeof BX != "undefined" ){
