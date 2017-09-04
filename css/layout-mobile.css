@@ -1543,7 +1543,7 @@ body {
 		vertical-align: middle;
 		width: 30px;
 		border-radius: 5px !important;
-		height: 90px;
+		height: 90px !important;
 		border: 1px solid #687734 !important;
 	}
 	.ui-spinner-input {
