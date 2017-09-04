@@ -30,7 +30,7 @@ $(document).ready(function(){
         }
         mydevice(); 
         slideoutdefine();
-        slideOutClosePc();
+        //slideOutClosePc();
 
     }
     $(window).resize(resize);
@@ -332,15 +332,14 @@ $(document).ready(function(){
             map.setZoom(zoomm);
         });
     }
-    function slideoutdefine(){
-        if (mobile==true) {
+    function slideoutdefine(){    
+        //if (mobile==true) {
             var slideout = new Slideout({
-                'panel': document.getElementById('panel'),
-                'menu': document.getElementById('menu'),
-                'padding': 200,
-                'tolerance': 70
-                });
-
+            'panel': document.getElementById('panel'),
+            'menu': document.getElementById('menu'),
+            'padding': 200,
+            'tolerance': 70
+            });               
             // Toggle button
             $('.toggle-button').on('click', function() {
                 slideout.toggle(); 
@@ -367,17 +366,16 @@ $(document).ready(function(){
                   slideout.disableTouch();
                   this.panel.removeEventListener('click', close);
                 });
-        }  
+        //}  
     }
     slideoutdefine();
     function slideOutClosePc() {
-        if ($(".slideout-open").length) {
+        if ($(".slideout-open")) {
            if (mobile == false) {
                 slideout.close();
             }         
         }
-    }
-
+    } 
 });
 
 if( typeof BX != "undefined" ){
