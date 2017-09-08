@@ -90,14 +90,14 @@ h1 {
 	display: none;
 }
 input::-webkit-input-placeholder {
-	color: #434343;
+	/*color: #434343;*/
 }
 input:-moz-placeholder {
-	color: #434343;
+	/*color: #434343;*/
 }
 h3{
 	font-size: 24px;
-	line-height: 30px;
+	/* line-height: 30px; */
 }
 .b-icon{
 	position: relative;
@@ -190,9 +190,14 @@ body {
 	overflow-y: auto;
 	left: 0;
 }
+	.b-left-block h2{
+		color: #F2EBDA;
+		font-family: "RobotoSlab-Bold";
+		margin-bottom: 15px;
+	}
 	.b-left-block .b-block {
 		width: 152px;
-		padding-top: 40px;
+		padding-top: 25px;
 	}
 		.b-logo {
 			display: block;
@@ -209,6 +214,12 @@ body {
 		.b-menu {
 			margin-bottom: 0;
 		}
+			.b-mobile-menu{
+				margin-top: 25px;
+			}
+			.slideout-menu .b-contacts{
+				padding-bottom: 30px;
+			}
 			.b-left-block .b-menu li {
 				margin-bottom: 5px;
 				padding-left: 14px;
@@ -236,23 +247,25 @@ body {
 
 		}
 			.b-contacts h3,.b-contacts a {
-				font-size: 12px;
+				font-size: 14px;
 				line-height: 22px;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 			}
 			.b-left-block .b-contacts h3 {
 				color: #ffffff;
+				font-size: 12px;
 			}
 			.b-left-block .b-contacts p a {
 				font-size: 14px;
 				color: #F2EBDA;
 			}	
-			.b-contacts-market {height: 50px;margin-bottom: 2px;}
+			.b-contacts-market {height: 50px;margin-bottom: 8px;}
 			.b-contacts-garden	{
 
 			}
 .b-body-block {
+	overflow: hidden;
 	width: 100%;
 	min-width: 100%;
 }
@@ -312,8 +325,8 @@ body {
 					vertical-align: middle;
 					width: 35px;
 					height: 35px;
-					background-color: #687734;
-					border: 2px solid;
+					background-color: #a0762c;
+					border: 2px solid #a0762c;
 					border-radius: 50%;
 					position: relative;
 					float: right;
@@ -335,7 +348,6 @@ body {
 				.b-search-block-top	{width: 100%;margin-bottom: 43px;}	
 				.b-search-block-bottom	{
 					width: 100%;
-					text-align: right;
 				}				
 				.b-search-block .b-search-block-top>span {
 					color: #A0762C;
@@ -354,9 +366,9 @@ body {
 					height: 35px;
 					position: relative;
 					border-radius: 50%;
-					border: 2px solid;
+					border: 2px solid #a0762c;
 					float: right;
-					background-color: #687734;
+					background-color: #a0762c;
 				}
 				.b-search-block .icon-map-marker {
 					color: #4A4A4A;
@@ -364,11 +376,11 @@ body {
 					line-height: 21px;
 					display: inline-block;
 					vertical-align: middle;
-					margin-right: 24px;
+					margin-right: 16px;
 					border-bottom: 1px dashed #4A4A4A;
 					position: relative;
 					/* margin-bottom: 24px; */
-					margin-top: 15px;
+					margin-top: 13px;
 					margin-left: 20px;
 					position: relative;
 				}	
@@ -424,10 +436,7 @@ body {
 					.b-search-field:after {
 
 					}					
-					.b-search-field input::-webkit-input-placeholder {color:#C6C6C6;}
-					.b-search-field input::-moz-placeholder          {color:#C6C6C6;}
-					.b-search-field input:-moz-placeholder           {color:#C6C6C6;}
-					.b-search-field input:-ms-input-placeholder      {color:#C6C6C6;}					
+					
 				.b-btn-search {
 					display: block;
 					position: absolute;
@@ -446,9 +455,9 @@ body {
 				box-sizing: border-box;
 				display: inline-block;
 				vertical-align: middle;
-				font-size: 18px;
+				font-size: 16px;
 				line-height: 26px;
-				padding: 13px 26px 13px 60px;
+				padding: 13px 20px 13px 50px;
 				position: relative;
 				float: right;
 			}
@@ -476,6 +485,9 @@ body {
 						max-height: 65px;
 						/* overflow: hidden; */
 					}	
+					.b-cart-butt-cont{
+						float: right;
+					}
 					.b-slider-item p {
 						font-size: 16px;
 						line-height: 24px;
@@ -543,7 +555,10 @@ body {
 						margin-right: 24px;
 					}
 						.b-product-card:hover{
-							border: 2px solid #687734;
+							border: 2px solid #F2EBDA;
+						}
+						.b-product-card:active{
+							/*border: 2px solid #687734;*/
 						}
 					.b-label{
 						position: absolute;
@@ -645,13 +660,13 @@ body {
 						}
 						.b-contacts h3 {
 							color: #A0762C;
-							line-height: 16px;
+							line-height: 22px;
 						}
 						.b-contacts a {
 							display: block;
-							font-size: 14px;
+							font-size: 16px;
 							color: #A0762C;
-							line-height: 22px;
+							line-height: 26px;
 						}						
 					.b-footer-menu {
 						display: table;
@@ -698,6 +713,7 @@ body {
 								margin-bottom: 24px;
 								padding-top: 8px;
 								width: 100%;
+								border-radius: 0px;
 							}
 							.b-footer-col .b-btn-green {
 								padding: 4px 15px 2px 15px;
@@ -733,7 +749,7 @@ body {
 		text-align: left;
 	}
 	.b-text b{
-		font-weight: normal;
+		font-weight: bold;
 	}
 	.b-text h1 {
 		font-size: 30px;
@@ -1196,6 +1212,11 @@ body {
 					border: 1px solid #687734;
 					border-radius: 15px;
 				}
+	.icon-cart:before{font-size: 20px;left: 18px;top: 15px;}
+	.b-btn-cart .icon-rub{
+		
+	}
+	.b-btn-cart .icon-rub:before{font-size: 13px;width: 14px;}
 .b-category {
 
 }
@@ -1205,7 +1226,7 @@ body {
 		.b-category ul {
 
 		}
-			.b-category .b-text li {width: calc((100% - 58px)/3);}
+			.b-category .b-text li {width: calc((100% - 60px)/3);}
 			.b-category .b-text li:nth-child(even) {
 				margin-right: 25px;
 			}
@@ -1227,6 +1248,10 @@ body {
 				.b-category ul a{
 				}
 				.b-category ul li:hover{
+					border: 2px solid #F2EBDA;
+				}
+				.b-category ul li:active{
+					/*border: 2px solid #687734;*/
 				}
 				.b-category-item {
 				}
@@ -1238,7 +1263,7 @@ body {
 					}
 					.b-category-item-valign {
 						display: table;
-						height: 62px;
+						height: 78px;
 						width: 100%;
 					}
 						.b-category h3 {
@@ -1249,12 +1274,16 @@ body {
 							text-align: center;
 						}
 					.b-good-popup .b-img {
-    width: 60%;
-    height: 166px;
-    margin-bottom: 20px;
-    display: inline-block;
-    vertical-align: middle;
-}
+					    width: 100%;
+					    height: 180px;
+					    margin-bottom: 20px;
+					    display: inline-block;
+					    vertical-align: middle;
+					}
+					.b-good-popup h4{
+						width: 100%;
+						font-size: 18px;
+					}
 
 .b-contacts-page {
 
@@ -1443,26 +1472,32 @@ body {
 				top: 0px;
 			}
 		.b-breadcrumbs li span{
-
+			display: none;
 		}
 .b-popup{
-	padding: 25px;
+	padding: 13px;
 	width: calc(100% - 40px);
+}
+.b-popup-wrap{
+
+}
+.b-popup-content{
+	padding: 25px 20px 20px;
 }
 .b-city-popup{
 	width: calc(100% - 40px);
 }
 	.b-popup h3{
 		margin-bottom: 16px;
+		line-height: 34px;
 	}
 	.b-popup p{
 		margin-bottom: 25px;
 	}
-	.b-city-nav{
-		margin-top: 30px;
-		text-align: right;
+	.b-popup-nav{
+    	padding: 25px 20px 24px;
 	}
-		.b-city-nav .b-btn-green{
+		.b-popup-nav .b-btn-green{
 			margin-left: 10px;
 		}
 		.b-btn-green.disabled{
@@ -1478,7 +1513,7 @@ body {
 	}
 	.b-category .b-text li {
 		/* height: 214px; */
-		width: calc((100% - 29px)/2);
+		width: calc((100% - 31px)/2);
 		min-width: 182px;
 		margin-right: 25px !important;
 	}
@@ -1666,7 +1701,7 @@ body {
 		padding: 14px 24px 12px 24px;
 	}
 	.b-product-card h3 {
-	    font-size: 16px;
+	    font-size: 18px;
 	    line-height: 24px;
 	    margin-bottom: 15px;
 	    height: auto;
@@ -1727,6 +1762,30 @@ body {
 			}
 			.b-map-adress br {
 			}
+	.b-detail-img{
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	.b-detail-text{
+		width: 100%;
+	}
+	.b-detail-price{
+		/*width: 100%;*/
+		/*text-align: center;*/
+		vertical-align: middle;
+		margin-bottom: 25px;
+		float: left;
+	}
+	.b-detail-mobile-only{
+		display: inline-block;
+		vertical-align: middle;
+		margin-top: 7px;
+		float: right;
+		padding: 20px 25px 18px;
+	}
+	.b-detail-desktop-only{
+		display: none;
+	}
 }
 @media screen and (max-width: 490px) {
 	.b-footer {
@@ -1767,6 +1826,30 @@ body {
 		width: 90%;
 		margin: 0 auto;
 	}
+	.b-use{
+
+	}
+		.b-use li{
+			width: 100%;
+			margin-right: 0px;
+		}
+			.b-use li:hover{
+				border: 2px solid #F2EBDA;
+			}
+			.b-use li .b-category-item{
+				padding: 8px;
+				padding-left: 15px;
+			}
+			.b-use li .b-category-img{
+				width: 30px;
+				height: 30px;
+			}
+			.b-use li .b-category-item-valign{
+				
+			}
+				.b-use li .b-category-item-valign h3{
+					
+				}
 }
 @media screen and (max-width: 450px) {
 	.b-category .b-text li {width: 100%;/*margin-left: calc((100% - 240px)/2);*/}

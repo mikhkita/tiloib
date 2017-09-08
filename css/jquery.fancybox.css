@@ -291,9 +291,6 @@
   box-sizing: border-box;
   z-index: 2; }
 
-.fancybox-close-small:focus:after {
-  outline: 1px dotted #888; }
-
 .fancybox-slide--video .fancybox-close-small {
   top: -36px;
   right: -36px;

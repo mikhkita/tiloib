@@ -9,7 +9,7 @@ $(document).ready(function(){
         if (myWidth>=1440) {
             pc = true;
         }
-        else    if (myWidth>800) {
+        else if (myWidth>800) {
             tablet = true; 
         }
         else {
@@ -36,6 +36,16 @@ $(document).ready(function(){
     }
     $(window).resize(resize);
     resize();
+
+    if( mobile )
+        new FastClick(document.body);
+
+    if( mobile ){
+        $("body").on("touchstart touchend", ".dropdown-item, .bx-ui-sls-clear", function(){
+            // alert();
+            $(this).click();
+        });
+    }
 
     $.fn.placeholder = function() {
         if(typeof document.createElement("input").placeholder == 'undefined') {
@@ -77,7 +87,8 @@ $(document).ready(function(){
             name = $(this).parent().find("h3").text();
             img = $(this).parent().find(".b-img").attr("style");
         }else{
-
+            name = $("h1").text();
+            img = "background-image: url('"+$(".b-detail-img img").attr("src")+"')";
         }
 
         progress.start(1.5);
@@ -91,8 +102,11 @@ $(document).ready(function(){
                 if( json.result == "success" ){
                     if( json.count != "0" ){
                         $(".b-btn-cart").removeAttr("onclick");
+                        $(".b-btn-cart .icon-rub").show();
                     }else{
+                        json.count = "Корзина";
                         $(".b-btn-cart").attr("onclick", "return false;");
+                        $(".b-btn-cart .icon-rub").hide();
                     }
                     $(".b-cart-num").text(json.count);
 
@@ -142,6 +156,18 @@ $(document).ready(function(){
 
         return false;
     });
+
+    $(".b-city-butt").click(function(){
+        setTimeout(function(){
+            $(".bx-ui-sls-fake").focus();
+        },300);
+    });
+
+    // $(".bx-ui-sls-fake").focus(function(){
+    //     $(this).parents(".dropdown-block").addClass("focus");
+    // }).blur(function(){
+    //     $(this).parents(".dropdown-block").removeClass("focus");
+    // });
 
     $('.b-product-slider').slick({
         dots: true,
@@ -378,7 +404,8 @@ $(document).ready(function(){
             'panel': document.getElementById('panel'),
             'menu': document.getElementById('menu'),
             'padding': 200,
-            'tolerance': 70
+            'tolerance': 70,
+            'touch' : false
             });               
             // Toggle button
             $('.toggle-button').on('click', function() {
@@ -416,6 +443,15 @@ $(document).ready(function(){
     //         }         
     //     }
     // } 
+
+    $(".b-search-field .icon-search").click(function(){
+        if( $(this).parents("form").find(".search-button").length ){
+            $(this).parents("form").find(".search-button").click();
+        }else{
+            $(this).parents("form").submit();
+        }
+        return false;
+    });
 });
 
 if( typeof BX != "undefined" ){
